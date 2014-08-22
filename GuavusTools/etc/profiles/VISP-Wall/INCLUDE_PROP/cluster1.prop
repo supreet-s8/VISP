@@ -1,0 +1,10 @@
+#######################
+# Cluster Configuration
+#######################
+cluster.WLTPNJ22-VISP-01.name=WLTPNJ22VIS-GVS-COL1-VIP
+cluster.WLTPNJ22-VISP-01.interface=icnb
+cluster.WLTPNJ22-VISP-01.expected-nodes=2
+cluster.WLTPNJ22-VISP-01.master.address=10.213.176.4
+cluster.WLTPNJ22-VISP-01.master.subnet=255.255.255.0
+cluster.WLTPNJ22-VISP-01.master.interface=amnb
+

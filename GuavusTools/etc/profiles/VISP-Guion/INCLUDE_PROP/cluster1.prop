@@ -1,0 +1,10 @@
+#######################
+# Cluster Configuration
+#######################
+cluster.IPLTINQ-VISP-01.name=IPLTINQ-VISP-GVS-COL1-VIP
+cluster.IPLTINQ-VISP-01.interface=icnb
+cluster.IPLTINQ-VISP-01.expected-nodes=2
+cluster.IPLTINQ-VISP-01.master.address=10.213.44.4
+cluster.IPLTINQ-VISP-01.master.subnet=255.255.255.0
+cluster.IPLTINQ-VISP-01.master.interface=amnb
+

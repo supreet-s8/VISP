@@ -1,0 +1,33 @@
+# Product
+build=Atlas
+# Release
+version=2.2.5PNSA
+
+########
+# ICN IP
+########
+# Required where you include drbd config
+
+#####################################################
+# Include Defaults
+#####################################################
+# Following files must exist in the specified Profile
+include=ntp
+include=user
+include=snmp
+include=hostmap
+include=iptablesHadoop
+
+# Configure Hostname
+ip.hostname=ELSSTX13NSA-A-GV-HPC7-24
+
+##########################
+# Interface Configuration
+##########################
+interface.icnb.ip=192.168.10.24
+interface.icnb.subnet=255.255.255.0
+interface.icnb.bond=eth4,eth5
+interface.icnb.comment=Inter Chassis Network
+
+
+#####################################################################

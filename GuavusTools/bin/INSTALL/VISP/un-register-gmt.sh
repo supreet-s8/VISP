@@ -1,0 +1,1 @@
+../un-register-gmt.sh

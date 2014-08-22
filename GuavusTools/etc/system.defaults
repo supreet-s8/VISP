@@ -1,0 +1,8 @@
+#baseDir=/var/root/newStart/GuavusTools
+baseDir=../../GuavusTools
+cliDir=../opt/profiles
+propertiesDir=../etc/profiles
+profile=Plymouth
+#version=2.0
+#password=Gu@vu$!!
+WaitOnHang=5

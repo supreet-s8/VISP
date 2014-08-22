@@ -1,0 +1,10 @@
+#######################
+# Cluster Configuration
+#######################
+cluster.PNSA-COL1-WNDSCTWL.name=GVS-PNSA-WNDSCTWL-COL1-VIP
+cluster.PNSA-COL1-WNDSCTWL.interface=icnb
+cluster.PNSA-COL1-WNDSCTWL.expected-nodes=2
+cluster.PNSA-COL1-WNDSCTWL.master.address=192.168.10.3
+cluster.PNSA-COL1-WNDSCTWL.master.subnet=255.255.255.0
+cluster.PNSA-COL1-WNDSCTWL.master.interface=icnb
+

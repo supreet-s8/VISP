@@ -1,0 +1,108 @@
+{
+
+"sleep_duration" : "86400",
+
+"server" : { "ip" : "10.136.239.147",
+
+                 "user" : "admin",
+
+                 "location" : "/data/healthcheck/inbox/192.168.11.236" },
+
+"commands" : [
+
+               "date",
+
+                "pmx subshell healthcheck shell df -kh",
+
+                "pmx subshell healthcheck hadoop check processes",
+
+                "/opt/hadoop/bin/hadoop dfsadmin -report",
+
+                "/opt/hadoop/bin/hadoop fsck /",
+
+                "ps -eaf --cols=5000 |grep -i hadoop | grep -v grep ",
+
+                "drbd-overview",
+
+                "top -b|head -100",
+
+                "/opt/hadoop/bin/hadoop dfs -lsr /data/",
+
+                "/opt/hadoop/bin/hadoop dfs -text /data/Ipfixcp1/done.txt",
+
+                "/opt/hadoop/bin/hadoop dfs -text /data/Ipfixcp2/done.txt",
+
+                "/opt/hadoop/bin/hadoop dfs -text /data/Ipfixcp3/done.txt",
+
+                "/opt/hadoop/bin/hadoop dfs -text /data/Radiuscp/done.txt",
+
+                "/opt/hadoop/bin/hadoop dfs -text /data/BackupDistcp/done.txt",
+
+                "/opt/hadoop/bin/hadoop dfs -text /data/PnsaSubscriberIb/done.txt",
+
+                "/opt/hadoop/bin/hadoop dfs -text /data/SubscriberIBcp/done.txt",
+
+                "iostat ",
+
+                "cli -t \"en\" \"internal query iterate subtree /stats/state/sample/paging\"",
+
+                "cli -t \"en\" \"collector stats instance-id 1 adaptor-stats ipfix dropped-flow interval-type 5-min interval-count 12\"",
+
+                "cli -t \"en\" \"collector stats instance-id 1 adaptor-stats pilotPacket dropped-flow interval-type 5-min interval-count 12\"",
+
+
+                "vmstat",
+
+                "cat /proc/zoneinfo",
+
+                "sar -w",
+
+
+                "ssh root@192.168.11.240 hostname",
+
+                "ssh root@192.168.11.240 df -kh",
+
+                "ssh root@192.168.11.240 cat /proc/mounts",
+
+                "ssh root@192.168.11.240 'top -b|head -100'",
+
+                "ssh root@192.168.11.240 iostat",
+
+                "ssh root@192.168.11.240 '/opt/tms/bin/cli -t \"en\" \"internal query iterate subtree /stats/state/sample/paging\"'",
+
+                "ssh root@192.168.11.240 vmstat",
+
+                "ssh root@192.168.11.240 cat /proc/zoneinfo",
+
+                "ssh root@192.168.11.240 sar -w",
+
+                "ssh root@192.168.11.240 iostat -x mpath0",
+
+                "ssh root@192.168.11.240 iostat -x mpath1"
+
+                "ssh root@192.168.11.242 hostname",
+
+                "ssh root@192.168.11.242 df -kh",
+             
+                "ssh root@192.168.11.242 cat /proc/mounts",
+
+                "ssh root@192.168.11.242 'top -b|head -100'",
+
+                "ssh root@192.168.11.242 iostat",
+
+                "ssh root@192.168.11.242 '/opt/tms/bin/cli -t \"en\" \"internal query iterate subtree /stats/state/sample/paging\"'",
+
+                "ssh root@192.168.11.242 vmstat",
+
+                "ssh root@192.168.11.242 cat /proc/zoneinfo",
+
+                "ssh root@192.168.11.242 sar -w",
+
+                "ssh root@192.168.11.242 iostat -x mpath0",
+
+                "ssh root@192.168.11.242 iostat -x mpath1"
+
+
+             ]
+
+}

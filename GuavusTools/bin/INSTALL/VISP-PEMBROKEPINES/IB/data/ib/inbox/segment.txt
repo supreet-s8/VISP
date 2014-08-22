@@ -1,0 +1,6 @@
+Extreme	0
+High	1
+Active	2
+Regular	3
+Mild	4
+Low	5

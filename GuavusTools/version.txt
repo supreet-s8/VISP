@@ -1,0 +1,36 @@
+version: 1.5.0-1 4.0.1.rc3
+
+SUMMARY:
+	
+	Incorporated 
+		- Columbus	06-04-2013	TUESDAY
+		- Sunnyvale	06-05-2013 	WEDNESDAY
+		- Rocklin	06-07-2013	FRIDAY
+		- Duff		06-10-2013	MONDAY
+		- Lodge		06-11-2013	TUESDAY
+		- Westland	06-11-2013	TUESDAY
+		- PembrokePines 06-18-2013	TUESDAY
+		- Orlando	06-19-2013	WEDNESDAY
+		- Westborough	06-27-2013	THURSDAY
+		- Euless	06-27-2013      THURSDAY
+		- Windsor	07-08-2013	MONDAY
+		- Schertz	07-08-2013	MONDAY
+		- Memphis	07-10-2013	WEDNESDAY
+		- Tulsa		07-10-2013	WEDNESDAY
+		- Rochester	08-08-2013	THURSDAY
+		- EastSyracuse	08-08-2013	THURSDAY
+		- Visp		10-16-2013	WEDNESDAY
+		- VISP-Memphis		01-30-2014	THURSDAY
+		- VISP-Tulsa    	01-31-2014	FRIDAY
+		- VISP-Guion		04-25-2014	FRIDAY
+		- VISP-Westside		04-25-2014      FRIDAY
+		- VISP-Pembroke		06-24-2014      TUESDAY
+		- VISP-Orlando		06-24-2014      TUESDAY
+		- VISP-EastSyracuse 	30-07-2014	WEDNESDAY	(Included PerminuteIpfix, PerminutePilot)
+		- VISP-Euless		12-08-2014	TUESDAY		(Included PerminuteIpfix, PerminutePilot)
+		- VISP-Westborough	22-08-2014	FRIDAY
+		- VISP-Branchburg	22-08-2014	FRIDAY
+		- VISP-Wall		22-08-2014	FRIDAY
+
+#
+

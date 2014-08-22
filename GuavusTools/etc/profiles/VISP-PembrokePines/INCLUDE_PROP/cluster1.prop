@@ -1,0 +1,10 @@
+#######################
+# Cluster Configuration
+#######################
+cluster.PMBRFLTFC-VISP-01.name=PMBRFLTFC-VISP-GVS-COL1-VIP
+cluster.PMBRFLTFC-VISP-01.interface=icnb
+cluster.PMBRFLTFC-VISP-01.expected-nodes=2
+cluster.PMBRFLTFC-VISP-01.master.address=10.192.103.4
+cluster.PMBRFLTFC-VISP-01.master.subnet=255.255.255.0
+cluster.PMBRFLTFC-VISP-01.master.interface=amnb
+

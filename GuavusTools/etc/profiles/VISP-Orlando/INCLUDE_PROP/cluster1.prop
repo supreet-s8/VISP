@@ -1,0 +1,10 @@
+#######################
+# Cluster Configuration
+#######################
+cluster.ORLHFLCF-VISP-01.name=ORLHFLCF-VISP-GVS-COL1-VIP
+cluster.ORLHFLCF-VISP-01.interface=icnb
+cluster.ORLHFLCF-VISP-01.expected-nodes=2
+cluster.ORLHFLCF-VISP-01.master.address=10.192.95.4
+cluster.ORLHFLCF-VISP-01.master.subnet=255.255.255.0
+cluster.ORLHFLCF-VISP-01.master.interface=amnb
+

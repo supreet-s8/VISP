@@ -1,0 +1,10 @@
+#######################
+# Cluster Configuration
+#######################
+cluster.TULYOK13-VISP-01.name=TULYOK13-VISP-GVS-COL1-VIP
+cluster.TULYOK13-VISP-01.interface=icnb
+cluster.TULYOK13-VISP-01.expected-nodes=2
+cluster.TULYOK13-VISP-01.master.address=10.143.172.4
+cluster.TULYOK13-VISP-01.master.subnet=255.255.255.0
+cluster.TULYOK13-VISP-01.master.interface=amnb
+

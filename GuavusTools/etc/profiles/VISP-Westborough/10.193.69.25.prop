@@ -1,0 +1,33 @@
+# Product
+build=Atlas
+# Release
+version=4.0.1VISP
+
+########
+# ICN IP
+########
+# Required where you include drbd config
+
+#####################################################
+# Include Defaults
+#####################################################
+# Following files must exist in the specified Profile
+include=ntp
+include=user
+include=snmp
+include=hostmap
+include=iptablesHadoop
+
+# Configure Hostname
+ip.hostname=WSBOMAGJVIS-A-VZ-GVS1-08
+
+##########################
+# Interface Configuration
+##########################
+interface.icnb.ip=192.168.10.25
+interface.icnb.subnet=255.255.255.0
+interface.icnb.bond=eth12,eth13
+interface.icnb.comment=Inter Chassis Network
+
+
+#####################################################################

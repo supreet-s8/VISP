@@ -1,0 +1,10 @@
+#######################
+# Cluster Configuration
+#######################
+cluster.ARTNTNBI-VISP-01.name=ARTNTNBI-VISP-GVS-COL1-VIP
+cluster.ARTNTNBI-VISP-01.interface=icnb
+cluster.ARTNTNBI-VISP-01.expected-nodes=2
+cluster.ARTNTNBI-VISP-01.master.address=10.192.118.4
+cluster.ARTNTNBI-VISP-01.master.subnet=255.255.255.0
+cluster.ARTNTNBI-VISP-01.master.interface=amnb
+

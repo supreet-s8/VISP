@@ -1,0 +1,10 @@
+#######################
+# Cluster Configuration
+#######################
+cluster.PNSA-COL1-ESYRNYEN.name=GVS-PNSA-ESYRNYEN-COL1-VIP
+cluster.PNSA-COL1-ESYRNYEN.interface=icnb
+cluster.PNSA-COL1-ESYRNYEN.expected-nodes=2
+cluster.PNSA-COL1-ESYRNYEN.master.address=192.168.10.3
+cluster.PNSA-COL1-ESYRNYEN.master.subnet=255.255.255.0
+cluster.PNSA-COL1-ESYRNYEN.master.interface=icnb
+

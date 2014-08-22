@@ -1,0 +1,7 @@
+#
+# Configure NTP servers
+#
+ntp.server1.ip=10.192.118.2
+ntp.server1.enable=yes
+ntp.server2.ip=10.192.118.3
+ntp.server2.enable=no

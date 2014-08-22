@@ -1,0 +1,10 @@
+#######################
+# Cluster Configuration
+#######################
+cluster.PNSA-COL1-GUA21.name=GVS-PNSA-GUA21-COL1-VIP
+cluster.PNSA-COL1-GUA21.interface=icnb
+cluster.PNSA-COL1-GUA21.expected-nodes=2
+cluster.PNSA-COL1-GUA21.master.address=192.168.10.3
+cluster.PNSA-COL1-GUA21.master.subnet=255.255.255.0
+cluster.PNSA-COL1-GUA21.master.interface=icnb
+

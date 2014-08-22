@@ -1,0 +1,10 @@
+#######################
+# Cluster Configuration
+#######################
+cluster.PNSA-COL2-SCHZTXCE.name=GVS-PNSA-SCHZTXCE-COL2-VIP
+cluster.PNSA-COL2-SCHZTXCE.interface=icnb
+cluster.PNSA-COL2-SCHZTXCE.expected-nodes=2
+cluster.PNSA-COL2-SCHZTXCE.master.address=192.168.10.4
+cluster.PNSA-COL2-SCHZTXCE.master.subnet=255.255.255.0
+cluster.PNSA-COL2-SCHZTXCE.master.interface=icnb
+

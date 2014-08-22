@@ -1,0 +1,31 @@
+# Routing configuration
+ip.default-gateway=10.136.46.1
+#ip.name-server=
+
+# Host mappings
+ip.host.Walpdivispguav-01-NSA-A-GV-HPC7-09=192.168.10.10
+ip.host.Walpdivispguav-01-NSA-A-GV-HPC7-10=192.168.10.11
+ip.host.Walpdivispguav-01-NSA-A-GV-HPC7-11=192.168.10.12
+ip.host.Walpdivispguav-01-NSA-A-GV-HPC7-12=192.168.10.13
+ip.host.Walpdivispguav-01-NSA-A-GV-HPC7-13=192.168.10.14
+ip.host.Walpdivispguav-01-NSA-A-GV-HPC7-14=192.168.10.15
+ip.host.Walpdivispguav-01-NSA-A-GV-HPC7-15=192.168.10.16
+ip.host.Walpdivispguav-01-NSA-A-GV-HPC7-16=192.168.10.17
+ip.host.Walpdivispguav-01-NSA-A-GV-HPC7-17=192.168.10.18
+ip.host.Walpdivispguav-01-NSA-A-GV-HPC7-18=192.168.10.19
+ip.host.Walpdivispguav-01-NSA-A-GV-HPC7-19=192.168.10.20
+ip.host.Walpdivispguav-01-NSA-A-GV-HPC7-20=192.168.10.21
+ip.host.Walpdivispguav-01-NSA-A-GV-HPC7-21=192.168.10.22
+ip.host.Walpdivispguav-01-NSA-A-GV-HPC7-22=192.168.10.23
+ip.host.Walpdivispguav-01-NSA-A-GV-HPC7-23=192.168.10.24
+ip.host.Walpdivispguav-01-NSA-A-GV-HPC7-24=192.168.10.25
+
+ip.host.GVS-PNSA-Walpdivispguav-01-COL1-VIP=10.136.46.20
+ip.host.GVS-PNSA-Walpdivispguav-01-COL2-VIP=10.136.46.21
+
+# EDN Network for SAP nodes
+
+# Host Mappings External
+
+# Turn on/off static host mapping
+ip.map-hostname=no

@@ -1,0 +1,106 @@
+####################
+# Hadoop Oozie
+####################
+
+hadoop.clients.0=192.168.10.20
+hadoop.clients.1=192.168.10.22
+hadoop.clients.2=192.168.10.40
+hadoop.clients.3=192.168.10.42
+hadoop.slaves.0=192.168.10.24
+hadoop.slaves.1=192.168.10.26
+hadoop.slaves.2=192.168.10.28
+hadoop.slaves.3=192.168.10.30
+
+# Master is a namenode cluster VIP
+hadoop.master.ip=192.168.10.3
+
+#### OOZIE Collection Centre Config ####
+
+# Provide oozie server to be the VIP address of the Name node cluster
+# Oozie Mandatory
+oozie.collector.component.count=1
+oozie.namenode.vip=192.168.10.3
+oozie.namenode.hostname=GVS-PNSA-ORLHFLCF-COL1-VIP
+
+# Job details (PnsaSubscriberIb)
+oozie.job.PnsaSubscriberIb.name=PnsaSubscriberIb
+oozie.job.PnsaSubscriberIb.path=/opt/etc/oozie/PnsaSubscriberIb
+oozie.job.PnsaSubscriberIb.attribute.jobFrequency=60
+oozie.job.PnsaSubscriberIb.attribute.binInterval=3600
+
+# Job action attributes
+oozie.job.PnsaSubscriberIb.action.SubscriberIBCreator.attribute.timeout=45
+oozie.job.PnsaSubscriberIb.action.SubscriberibIpPortCleanup.attribute.timeout=0
+oozie.job.PnsaSubscriberIb.action.SubscriberibSelfIpCleanup.attribute.timeout=0
+
+# Job details (Ipfixcp1)
+oozie.job.Ipfixcp1.name=DistcpJob
+oozie.job.Ipfixcp1.path=/opt/etc/oozie/Distcp
+oozie.job.Ipfixcp1.attribute.jobFrequency=15
+
+# Job action attributes
+oozie.job.Ipfixcp1.action.DistcpAction.attribute.timeout=0
+
+# Job details (Ipfixcp2)
+oozie.job.Ipfixcp2.name=DistcpJob
+oozie.job.Ipfixcp2.path=/opt/etc/oozie/Distcp
+oozie.job.Ipfixcp2.attribute.jobFrequency=15
+
+# Job action attributes
+oozie.job.Ipfixcp2.action.DistcpAction.attribute.timeout=0
+
+# Job details (Ipfixcp3)
+oozie.job.Ipfixcp3.name=DistcpJob
+oozie.job.Ipfixcp3.path=/opt/etc/oozie/Distcp
+oozie.job.Ipfixcp3.attribute.jobFrequency=15
+
+# Job action attributes
+oozie.job.Ipfixcp3.action.DistcpAction.attribute.timeout=0
+
+# Job details (SubscriberIBcp)
+oozie.job.SubscriberIBcp.name=DistcpJob 
+oozie.job.SubscriberIBcp.path=/opt/etc/oozie/Distcp
+oozie.job.SubscriberIBcp.attribute.jobFrequency=60
+
+# Job action attributes
+oozie.job.SubscriberIBcp.action.DistcpAction.attribute.timeout=0
+
+# Job details (Radiuscp)
+oozie.job.Radiuscp.name=DistcpJob
+oozie.job.Radiuscp.path=/opt/etc/oozie/Distcp
+oozie.job.Radiuscp.attribute.jobFrequency=5
+
+# Job action attributes
+oozie.job.Radiuscp.action.DistcpAction.attribute.timeout=0
+
+# Job details (CleanupCollector)
+oozie.job.CleanupCollector.name=CleanupDataset
+oozie.job.CleanupCollector.path=/opt/etc/oozie/CleanupDataset
+oozie.job.CleanupCollector.attribute.jobFrequency=1
+
+# Job details (CleanupSubIb)
+oozie.job.CleanupSubIb.name=CleanupAtlas
+oozie.job.CleanupSubIb.path=/opt/etc/oozie/CleanupAtlas
+oozie.job.CleanupSubIb.attribute.jobFrequency=1
+
+# Job details (CleanupLogs)
+oozie.job.CleanupLogs.name=CleanupLogs
+oozie.job.CleanupLogs.path=/opt/etc/oozie/CleanupLogs
+oozie.job.CleanupLogs.attribute.jobFrequency=1
+
+# Job Details (BackupDistcp)
+oozie.job.BackupDistcp.name=BackupDistcp
+oozie.job.BackupDistcp.path=/opt/etc/oozie/BackupDistcp
+oozie.job.BackupDistcp.attribute.jobFrequency=5
+
+# Job Details (CleanupResidual)
+oozie.job.CleanupResidual.name=CleanupDataset 
+oozie.job.CleanupResidual.path=/opt/etc/oozie/CleanupDataset
+oozie.job.CleanupResidual.attribute.jobFrequency=1
+
+
+# Dataset attributes
+oozie.dataset.common.attribute.DCName=Orlando
+oozie.dataset.common.attribute.destNamenode=cospgvcnp8-vip
+oozie.dataset.common.attribute.srcNamenode=GVS-PNSA-ORLHFLCF-COL1-VIP
+

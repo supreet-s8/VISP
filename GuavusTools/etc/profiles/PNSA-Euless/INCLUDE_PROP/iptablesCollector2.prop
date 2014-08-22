@@ -1,0 +1,7 @@
+##########
+# ICN IPs for collectors.
+##########
+ip.filter.input.accept.0=192.168.10.40
+ip.filter.input.accept.1=192.168.10.42
+ip.filter.input.accept.2=192.168.10.4
+

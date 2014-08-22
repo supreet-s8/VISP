@@ -1,0 +1,1 @@
+../restartcollector.sh

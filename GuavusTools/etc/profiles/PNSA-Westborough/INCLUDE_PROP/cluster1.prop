@@ -1,0 +1,10 @@
+#######################
+# Cluster Configuration
+#######################
+cluster.PNSA-COL1-WSBOMAGJ.name=GVS-PNSA-WSBOMAGJ-COL1-VIP
+cluster.PNSA-COL1-WSBOMAGJ.interface=icnb
+cluster.PNSA-COL1-WSBOMAGJ.expected-nodes=2
+cluster.PNSA-COL1-WSBOMAGJ.master.address=192.168.10.3
+cluster.PNSA-COL1-WSBOMAGJ.master.subnet=255.255.255.0
+cluster.PNSA-COL1-WSBOMAGJ.master.interface=icnb
+

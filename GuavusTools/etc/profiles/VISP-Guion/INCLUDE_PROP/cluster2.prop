@@ -1,0 +1,10 @@
+#######################
+# Cluster Configuration
+#######################
+cluster.PNSA-COL2-IPLTINQ-VISP-01.name=GVS-VISP-IPLTINQ-VISP-01-COL2-VIP
+cluster.PNSA-COL2-IPLTINQ-VISP-01.interface=icnb
+cluster.PNSA-COL2-IPLTINQ-VISP-01.expected-nodes=2
+cluster.PNSA-COL2-IPLTINQ-VISP-01.master.address=10.136.46.21
+cluster.PNSA-COL2-IPLTINQ-VISP-01.master.subnet=255.255.255.0
+cluster.PNSA-COL2-IPLTINQ-VISP-01.master.interface=amnb
+

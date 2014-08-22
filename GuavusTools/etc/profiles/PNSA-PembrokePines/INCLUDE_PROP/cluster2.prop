@@ -1,0 +1,10 @@
+#######################
+# Cluster Configuration
+#######################
+cluster.PNSA-COL2-PMBRFLTFC.name=GVS-PNSA-PMBRFLTFC-COL2-VIP
+cluster.PNSA-COL2-PMBRFLTFC.interface=icnb
+cluster.PNSA-COL2-PMBRFLTFC.expected-nodes=2
+cluster.PNSA-COL2-PMBRFLTFC.master.address=192.168.10.4
+cluster.PNSA-COL2-PMBRFLTFC.master.subnet=255.255.255.0
+cluster.PNSA-COL2-PMBRFLTFC.master.interface=icnb
+

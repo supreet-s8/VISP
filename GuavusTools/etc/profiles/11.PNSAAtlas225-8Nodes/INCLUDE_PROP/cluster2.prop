@@ -1,0 +1,10 @@
+#######################
+# Cluster Configuration
+#######################
+cluster.PNSA-COL2-RCKLCAIG.name=GVS-PNSA-RCKLCAIG-COL2-VIP
+cluster.PNSA-COL2-RCKLCAIG.interface=icnb
+cluster.PNSA-COL2-RCKLCAIG.expected-nodes=2
+cluster.PNSA-COL2-RCKLCAIG.master.address=192.168.10.4
+cluster.PNSA-COL2-RCKLCAIG.master.subnet=255.255.255.0
+cluster.PNSA-COL2-RCKLCAIG.master.interface=icnb
+

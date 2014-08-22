@@ -1,0 +1,10 @@
+#######################
+# Cluster Configuration
+#######################
+cluster.ESYRNYEN-VISP-01.name=ESYRNYENVIS-GVS-COL1-VIP
+cluster.ESYRNYEN-VISP-01.interface=icnb
+cluster.ESYRNYEN-VISP-01.expected-nodes=2
+cluster.ESYRNYEN-VISP-01.master.address=10.213.107.4
+cluster.ESYRNYEN-VISP-01.master.subnet=255.255.255.0
+cluster.ESYRNYEN-VISP-01.master.interface=amnb
+

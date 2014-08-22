@@ -1,0 +1,200 @@
+#!/usr/bin/perl
+use strict;
+use lib '../lib';
+use Parse;
+use Getopt::Long;
+use Carp;
+my $DefaultParamsFile ="../etc/system.defaults";		# Requires the path of system defaults file # Do not Alter this variable, or Do not delete system.defaults file #
+my $baseDir=&getDefaults();
+
+# Setup options
+my @INCLUDE=("user.prop","snmp.prop","ntp.prop","mapReduce.prop","hostmap.prop","collector1.prop","collector2.prop","sm.prop","cluster1.prop","cluster2.prop","drbd.prop","INCLUDE_PROP","www.xxx.yyy.zzz.prop");
+my $propertiesDir="$baseDir/etc/profiles";
+my $cliDir="$baseDir/opt/profiles";
+my $propertiesFile=undef;
+my $applyCli=undef;
+my $dir=undef;
+my $profile=undef;
+my $node=undef;
+my $help=undef;
+my $verbose=0;
+my $output=GetOptions( "propertiesDir:s"	=>      \$propertiesDir,
+                       "propertiesFile:s"	=>      \$propertiesFile,
+		       "profile:s"		=>	\$profile,
+		       "node:s"			=>	\$node,
+                       "cliDir:s"		=>      \$cliDir,
+                       "applyCli"		=>      \$applyCli,
+		       "verbose"		=>	\$verbose,
+		       "help"			=>	\$help);
+
+if ($help) {
+	&usage;
+	exit;
+}
+
+sub usage {
+	print <<EOF
+
+Usage:
+
+Provide in the following options.
+
+--propertiesFile	(Mandatory)	=> Exact path of the properties file, it 'll generate the .cli file in same directory as of properties file.
+
+or,
+
+--propertiesDir				=> Override the default properties file directory path, listed in "system.defaults".
+
+--cliDir				=> Override the default cli file directory path, listed in "system.defaults".
+
+--profile 		(Mandatory)	=> Name of the Distribution/Data centre directory under "propertiesDir" directory which contains .prop files.
+
+--node					=> Node IP address, if want to create a .cli file for one node contained in Distribution/Data centre directory.
+
+
+EOF
+
+}
+
+
+
+
+
+#print "propertiesDir:$propertiesDir\npropertiesFile:$propertiesFile\ncliDir:$cliDir\n";
+
+if ((! $profile) && (! $propertiesFile)) {
+	&usage();
+	exit;
+}
+
+# Generate directories and Validate
+
+my $fullProperties="$propertiesDir/$profile";
+
+my $fullCli="$cliDir/$profile";
+
+# Create CLI path.
+
+if (! ((-d $fullProperties))) { # && (-d $fullCli))) {
+	print "Properties path does not exists:\t$fullProperties".
+	"\nCommiting Exit...!\n";
+	exit;
+}
+
+if (! (-d $fullCli)) {
+	print "Creating CLI path directory.\n";
+	system ("mkdir $fullCli");
+	if (-d $fullCli) {
+		print "$fullCli ...Created\n";	
+	} else {
+		print "Unable to create CLI path.\nCommitting Exit...!\n";
+		exit;
+	}
+
+}
+
+
+if (defined $node) {
+	if (!&is_valid($node)) {
+		croak "\nError: Invalid IP address for the node, please try again.\n\n";
+	}
+	my $infile="$node".".prop";
+	my $outfile="$node".".cli";
+	print "Generating .cli for $node" if($verbose==0);
+	my $ref=&Parse::parse_prop("$fullProperties/$infile",$verbose);		# Provide the file path, returns the hash ref to the properties.
+	if (! $ref) {
+		print "Error: Properties file reference not retained.\nCommitting Exit...!\n";
+		exit;
+	}
+	my $cli=&Parse::generate_cli("$fullCli/$outfile", $ref, $verbose);	# Provide outfile path and ref to a hash, generates the .cli file, returns the name of file generated (same as the supplied name).
+	print "\tCreated $cli" if($verbose==0);
+        print "\t\t...Done\n" if($verbose==0);
+
+} elsif (-f $propertiesFile) {
+	
+	my $infile=$propertiesFile;
+
+
+	my $outfile="$1".".cli" if ($infile=~/(.+\/\d+\.\d+\.\d+\.\d+)\.prop$/);
+	print "Generating .cli for $infile" if($verbose==0);
+	my $ref=&Parse::parse_prop("$infile", $verbose);
+
+	if (! $ref) {
+                print "Error: Properties file reference not retained.\nCommitting Exit...!\n";
+                exit;
+        }
+	my $cli=&Parse::generate_cli("$outfile", $ref, $verbose);
+	print "\tCreated $cli" if($verbose==0);
+        print "\t\t...Done\n" if($verbose==0);
+
+} else {
+
+	&callDir($fullProperties,$fullCli);
+
+} 
+
+
+
+
+# Pass the directory containing properties file. Generates .cli files for each file at specified output directory #
+sub callDir {
+
+	my $prop_path=shift;
+	my $cli_path=shift;
+
+	opendir(DIR,"$prop_path") or die "Unable to open directory. Error: $!\n";
+	my @list=readdir DIR;
+	close DIR;
+
+	foreach my $file (@list) {
+
+	my %BUILD=();
+		next if ($file=~/^\./);
+		next if (grep {$_ =~ /$file/} @INCLUDE);
+		$BUILD{'IP'}=$1 if ($file=~/^(\d+\.\d+\.\d+\.\d+)\.prop$/);
+		$BUILD{'cliFile'}="$BUILD{'IP'}".".cli";
+		print "Generating .cli for $BUILD{'IP'}" if($verbose==0);
+		# Generating .cli files for all files in profile/ dir., Returns the file path generated.
+		my $ref=&Parse::parse_prop("$prop_path/$file", $verbose);	
+        	if (! defined $ref) {
+			print "ERROR: Committing Exit...!\n";
+			exit;	
+		
+		} elsif (! ref $ref) {
+                	warn "WARN: Assuming it to be INCLUDE properties.\nSkipping...!\n";
+       	  		next;
+		}
+		my $cli=&Parse::generate_cli("$cli_path/$BUILD{'cliFile'}",$ref, $verbose);
+		print "\tCreated $cli" if($verbose==0);
+		print "\t\t...Done\n" if($verbose==0);
+	}
+	return 1;
+	# Generation of .CLI files completed.
+}
+
+
+
+# Reading system defaults.
+
+sub getDefaults {
+	my $base="";
+	open (SD, "<$DefaultParamsFile") or carp "Unable to open Default params file :$DefaultParamsFile";
+	while (<SD>) {
+	my $tmp;
+	chomp;
+	next if m/^\s*$/ or m/^\s*#/;
+		($tmp,$base) = split(/=/, $_) if m/baseDir/i;
+	}
+	return $base;
+}
+
+
+# IP validation
+sub is_valid {
+	my $IP=shift;
+        chomp $IP;
+        $IP=~s/\s+//g;
+        return 1 if(($IP=~/^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})$/) && ($1<=255) && ($2<=255) && ($3<=255) && ($4<=255));
+        return undef;
+}
+

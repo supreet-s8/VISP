@@ -1,0 +1,10 @@
+#######################
+# Cluster Configuration
+#######################
+cluster.WSBOMAGJ-VISP-01.name=WSBOMAGJVIS-GVS-COL1-VIP
+cluster.WSBOMAGJ-VISP-01.interface=icnb
+cluster.WSBOMAGJ-VISP-01.expected-nodes=2
+cluster.WSBOMAGJ-VISP-01.master.address=10.193.69.4
+cluster.WSBOMAGJ-VISP-01.master.subnet=255.255.255.0
+cluster.WSBOMAGJ-VISP-01.master.interface=amnb
+

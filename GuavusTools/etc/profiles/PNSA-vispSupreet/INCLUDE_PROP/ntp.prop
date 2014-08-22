@@ -1,0 +1,5 @@
+#
+# Configure NTP servers
+#
+ntp.server1.ip=10.136.46.1
+ntp.server1.enable=yes

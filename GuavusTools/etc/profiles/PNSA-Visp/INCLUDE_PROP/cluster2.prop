@@ -1,0 +1,10 @@
+#######################
+# Cluster Configuration
+#######################
+cluster.PNSA-COL2-Walpdivispguav-01.name=GVS-VISP-Walpdivispguav-01-COL2-VIP
+cluster.PNSA-COL2-Walpdivispguav-01.interface=icnb
+cluster.PNSA-COL2-Walpdivispguav-01.expected-nodes=2
+cluster.PNSA-COL2-Walpdivispguav-01.master.address=192.168.10.4
+cluster.PNSA-COL2-Walpdivispguav-01.master.subnet=255.255.255.0
+cluster.PNSA-COL2-Walpdivispguav-01.master.interface=icnb
+

@@ -1,0 +1,9 @@
+#!/bin/bash
+
+echo "Listing available profiles"
+echo "--------------------------"
+echo "$1"
+ls ../etc/profiles/$1
+echo " "
+echo "$0 <profilename> will list the contents of the profile"
+echo " "

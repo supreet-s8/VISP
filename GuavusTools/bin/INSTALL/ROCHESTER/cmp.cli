@@ -1,0 +1,59 @@
+
+
+en
+conf t
+
+ip filter chain FORWARD clear
+ip filter chain INPUT clear
+ip filter chain OUTPUT clear
+ip filter chain INPUT policy ACCEPT
+ip filter chain INPUT rule append tail target ACCEPT dup-delete in-intf lo
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50060 source-addr 192.168.10.22 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50071 source-addr 192.168.10.22 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50076 source-addr 192.168.10.22 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50060 source-addr 192.168.10.28 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50071 source-addr 192.168.10.28 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50076 source-addr 192.168.10.28 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50060 source-addr 192.168.10.20 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50071 source-addr 192.168.10.20 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50076 source-addr 192.168.10.20 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50060 source-addr 192.168.10.26 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50071 source-addr 192.168.10.26 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50076 source-addr 192.168.10.26 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50060 source-addr 192.168.10.24 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50071 source-addr 192.168.10.24 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50076 source-addr 192.168.10.24 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50060 source-addr 192.168.10.3 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50071 source-addr 192.168.10.3 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50076 source-addr 192.168.10.3 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol icmp icmp-type 13 icmp-code 0
+ip filter chain INPUT rule append tail target ACCEPT protocol icmp icmp-type 14 icmp-code 0
+ip filter chain INPUT rule append tail target ACCEPT protocol icmp icmp-type 17 icmp-code 0
+ip filter chain INPUT rule append tail target ACCEPT protocol icmp icmp-type 18 icmp-code 0
+ip filter chain OUTPUT rule append tail target ACCEPT protocol icmp icmp-type 13 icmp-code 0
+ip filter chain OUTPUT rule append tail target ACCEPT protocol icmp icmp-type 14 icmp-code 0
+ip filter chain OUTPUT rule append tail target ACCEPT protocol icmp icmp-type 17 icmp-code 0
+ip filter chain OUTPUT rule append tail target ACCEPT protocol icmp icmp-type 18 icmp-code 0
+ip filter chain OUTPUT rule append tail target DROP protocol icmp icmp-type 13
+ip filter chain OUTPUT rule append tail target DROP protocol icmp icmp-type 14
+ip filter chain OUTPUT rule append tail target DROP protocol icmp icmp-type 17
+ip filter chain OUTPUT rule append tail target DROP protocol icmp icmp-type 18
+ip filter chain INPUT rule append tail target DROP protocol icmp icmp-type 13
+ip filter chain INPUT rule append tail target DROP protocol icmp icmp-type 14
+ip filter chain INPUT rule append tail target DROP protocol icmp icmp-type 17
+ip filter chain INPUT rule append tail target DROP protocol icmp icmp-type 18
+ip filter chain INPUT rule append tail target DROP protocol tcp dest-port 50030
+ip filter chain INPUT rule append tail target DROP protocol tcp dest-port 50060
+ip filter chain INPUT rule append tail target DROP protocol tcp dest-port 50070
+ip filter chain INPUT rule append tail target DROP protocol tcp dest-port 50071
+ip filter chain INPUT rule append tail target DROP protocol tcp dest-port 50076
+ip filter chain INPUT rule append tail target DROP protocol tcp dest-port 50075
+ip filter chain INPUT rule append tail target DROP protocol tcp dest-port 50090
+ip filter chain INPUT rule append tail target DROP protocol udp dest-port 5353
+ip filter chain INPUT rule append tail target DROP protocol tcp dest-port 8080
+ip filter enable
+
+
+wr mem
+
+

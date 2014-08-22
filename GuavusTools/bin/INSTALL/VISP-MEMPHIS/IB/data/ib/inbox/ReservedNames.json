@@ -1,0 +1,110 @@
+[
+    {
+        "ReservedNames": {
+            "notfound": {
+                "name": "spnotfound"
+            }, 
+            "rollup": {
+                "name": "sprollup", 
+                "id": "1000001"
+            }, 
+            "misc": {
+                "name": "Miscellaneous", 
+                "id": "1000548"
+            }
+        }, 
+        "Dimension": "SP", 
+        "NameIDSource": "SNT_SERVICE_PROVIDER"
+    }, 
+    {
+        "ReservedNames": {
+            "misc": {
+                "name": "Miscellaneous", 
+                "id": "1000014"
+            }
+        }, 
+        "Dimension": "URL_CATEGORY", 
+        "NameIDSource": "SNT_URL_CATEGORY"
+    }, 
+    {
+        "ReservedNames": {
+            "notfound": {
+                "name": "appnotfound"
+            }, 
+            "rollup": {
+                "name": "approllup", 
+                "id": "1000001"
+            }, 
+            "misc": {
+                "name": "Miscellaneous", 
+                "id": "1000251"
+            }
+        }, 
+        "Dimension": "APP", 
+        "NameIDSource": "SNT_MOBILE_APP_NAME"
+    }, 
+    {
+        "ReservedNames": {
+            "misc": {
+                "name": "Miscellaneous", 
+                "id": "1000004"
+            }
+        }, 
+        "Dimension": "APP_TYPE", 
+        "NameIDSource": "SNT_MOBILE_APP_TYPE"
+    }, 
+    {
+        "ReservedNames": {
+            "misc": {
+                "name": "Miscellaneous", 
+                "id": "1000014"
+            }
+        }, 
+        "Dimension": "APP_CATEGORY", 
+        "NameIDSource": "SNT_MOBILE_APP_CATEGORY"
+    }, 
+    {
+        "ReservedNames": {
+            "notfound": {
+                "name": "nhappnotfound"
+            }, 
+            "rollup": {
+                "name": "nhapprollup", 
+                "id": "1000001"
+            }, 
+            "misc": {
+                "name": "Miscellaneous", 
+                "id": "1001236"
+            }
+        }, 
+        "Dimension": "NH_APP", 
+        "NameIDSource": "SNT_MOBILE_NHAPP_NAME"
+    }, 
+    {
+        "ReservedNames": {
+            "misc": {
+                "name": "Miscellaneous", 
+                "id": "1000010"
+            }
+        }, 
+        "Dimension": "NH_APP_CAT", 
+        "NameIDSource": "SNT_MOBILE_NHAPP_CATEGORY"
+    }, 
+    {
+        "ReservedNames": {
+            "notfound": {
+                "name": "modelnotfound"
+            }, 
+            "rollup": {
+                "name": "devicerollup", 
+                "id": "1000001"
+            }, 
+            "misc": {
+                "name": "Miscellaneous", 
+                "id": "1000055"
+            }
+        }, 
+        "Dimension": "DEVICE", 
+        "NameIDSource": "SNT_DEVICE_MODEL"
+    }
+]

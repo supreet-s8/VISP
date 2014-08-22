@@ -1,0 +1,10 @@
+#######################
+# Cluster Configuration
+#######################
+cluster.PNSA-COL1-SNVACANX.name=GVS-PNSA-SNVACANX-COL1-VIP
+cluster.PNSA-COL1-SNVACANX.interface=icnb
+cluster.PNSA-COL1-SNVACANX.expected-nodes=2
+cluster.PNSA-COL1-SNVACANX.master.address=192.168.10.3
+cluster.PNSA-COL1-SNVACANX.master.subnet=255.255.255.0
+cluster.PNSA-COL1-SNVACANX.master.interface=icnb
+

@@ -1,0 +1,8 @@
+###################################
+# DRBD # Hostnames and IP addresses
+###################################
+drbd.hostone.hostname=Walpdivispguav-01-NSA-A-GV-HPC7-09
+drbd.hostone.ip=192.168.10.10
+drbd.hosttwo.hostname=Walpdivispguav-01-NSA-A-GV-HPC7-10
+drbd.hosttwo.ip=192.168.10.11
+

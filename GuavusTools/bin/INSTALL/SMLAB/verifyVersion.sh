@@ -1,0 +1,1 @@
+../verifyVersion.sh

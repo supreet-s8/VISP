@@ -1,0 +1,1 @@
+../verifyTps.sh

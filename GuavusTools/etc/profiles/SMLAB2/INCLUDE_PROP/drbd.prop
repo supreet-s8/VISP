@@ -1,0 +1,8 @@
+###################################
+# DRBD # Hostnames and IP addresses
+###################################
+drbd.hostone.hostname=GUA21NSA-A-GV-HPC7-236
+drbd.hostone.ip=192.168.11.236
+drbd.hosttwo.hostname=GUA21NSA-A-GV-HPC7-238  
+drbd.hosttwo.ip=192.168.11.238
+

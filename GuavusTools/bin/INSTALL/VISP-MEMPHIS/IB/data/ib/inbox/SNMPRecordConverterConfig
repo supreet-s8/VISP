@@ -1,0 +1,1 @@
+default,TimestampKey:agentReceivedData,IPKey:attackerTranslatedAddress,PortKey:attackerTranslatedPort,DeviceVendorKey:deviceVendor,DeviceProductKey:deviceProduct,NameKey:name,DeviceVersionKey:deviceVersion,SignatureIDKey:signatureID,SeverityKey:severity,SyslogVersionKey:syslogVersion

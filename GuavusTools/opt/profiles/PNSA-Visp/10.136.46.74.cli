@@ -1,0 +1,224 @@
+# interface
+bond icnb
+interface eth4 bond icnb
+no interface eth4 shutdown
+no interface eth4 dhcp
+interface eth5 bond icnb
+no interface eth5 shutdown
+no interface eth5 dhcp
+interface icnb ip address 192.168.10.15 255.255.255.0
+no interface icnb shutdown
+no interface icnb dhcp
+interface icnb comment "Inter Chassis Network"
+# ip
+no ip map-hostname
+ip host Walpdivispguav-01-NSA-A-GV-HPC7-22 192.168.10.23
+ip host Walpdivispguav-01-NSA-A-GV-HPC7-11 192.168.10.12
+ip host Walpdivispguav-01-NSA-A-GV-HPC7-19 192.168.10.20
+ip host Walpdivispguav-01-NSA-A-GV-HPC7-10 192.168.10.11
+ip host Walpdivispguav-01-NSA-A-GV-HPC7-18 192.168.10.19
+ip host Walpdivispguav-01-NSA-A-GV-HPC7-12 192.168.10.13
+ip host GVS-PNSA-Walpdivispguav-01-COL1-VIP 192.168.10.3
+ip host Walpdivispguav-01-NSA-A-GV-HPC7-09 192.168.10.10
+ip host Walpdivispguav-01-NSA-A-GV-HPC7-16 192.168.10.17
+ip host GVS-PNSA-Walpdivispguav-01-COL2-VIP 192.168.10.4
+ip host Allot-DM1 192.168.10.1
+ip host Walpdivispguav-01-NSA-A-GV-HPC7-14 192.168.10.15
+ip host Walpdivispguav-01-NSA-A-GV-HPC7-15 192.168.10.16
+ip host Walpdivispguav-01-NSA-A-GV-HPC7-23 192.168.10.24
+ip host Walpdivispguav-01-NSA-A-GV-HPC7-17 192.168.10.18
+ip host Allot-DM2 192.168.10.2
+ip host Walpdivispguav-01-NSA-A-GV-HPC7-20 192.168.10.21
+ip host Walpdivispguav-01-NSA-A-GV-HPC7-21 192.168.10.22
+ip host Walpdivispguav-01-NSA-A-GV-HPC7-24 192.168.10.25
+ip host Walpdivispguav-01-NSA-A-GV-HPC7-13 192.168.10.14
+hostname Walpdivispguav-01-NSA-A-GV-HPC7-14
+no web enable
+no web http enable
+no web https enable
+no telnet-server enable
+no virt enable
+banner login "WARNING NOTICE This system is for the use of authorized users only. Individuals using this system without authority, or in excess of their authority, are subject to having all of their activities on this system monitored and recorded by system personnel. In the course of monitoring individuals improperly using this system, or in the course of system maintenance, the activities of authorized users may also be monitored. Anyone using this system expressly consents to such monitoring and is advised that if such monitoring reveals possible evidence of criminal activity, system personnel may provide the evidence of such monitoring to law enforcement officials."
+ip filter chain FORWARD clear
+ip filter chain INPUT clear
+ip filter chain OUTPUT clear
+ip filter chain INPUT policy ACCEPT
+ip filter chain INPUT rule append tail target ACCEPT dup-delete in-intf lo
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50060 source-addr 192.168.10.21 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50071 source-addr 192.168.10.21 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50076 source-addr 192.168.10.21 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50060 source-addr 192.168.10.17 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50071 source-addr 192.168.10.17 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50076 source-addr 192.168.10.17 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50060 source-addr 192.168.10.12 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50071 source-addr 192.168.10.12 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50076 source-addr 192.168.10.12 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50060 source-addr 192.168.10.4 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50071 source-addr 192.168.10.4 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50076 source-addr 192.168.10.4 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50060 source-addr 192.168.10.11 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50071 source-addr 192.168.10.11 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50076 source-addr 192.168.10.11 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50060 source-addr 192.168.10.10 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50071 source-addr 192.168.10.10 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50076 source-addr 192.168.10.10 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50060 source-addr 192.168.10.3 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50071 source-addr 192.168.10.3 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50076 source-addr 192.168.10.3 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50060 source-addr 192.168.10.23 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50071 source-addr 192.168.10.23 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50076 source-addr 192.168.10.23 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50060 source-addr 192.168.10.16 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50071 source-addr 192.168.10.16 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50076 source-addr 192.168.10.16 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50060 source-addr 192.168.10.13 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50071 source-addr 192.168.10.13 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50076 source-addr 192.168.10.13 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50060 source-addr 192.168.10.19 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50071 source-addr 192.168.10.19 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50076 source-addr 192.168.10.19 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50060 source-addr 192.168.10.22 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50071 source-addr 192.168.10.22 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50076 source-addr 192.168.10.22 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50060 source-addr 192.168.10.24 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50071 source-addr 192.168.10.24 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50076 source-addr 192.168.10.24 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50060 source-addr 192.168.10.25 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50071 source-addr 192.168.10.25 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50076 source-addr 192.168.10.25 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50060 source-addr 192.168.10.18 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50071 source-addr 192.168.10.18 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50076 source-addr 192.168.10.18 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50060 source-addr 192.168.10.14 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50071 source-addr 192.168.10.14 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50076 source-addr 192.168.10.14 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50060 source-addr 192.168.10.20 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50071 source-addr 192.168.10.20 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50076 source-addr 192.168.10.20 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50060 source-addr 192.168.10.15 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50071 source-addr 192.168.10.15 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol tcp dest-port 50076 source-addr 192.168.10.15 /32
+ip filter chain INPUT rule append tail target ACCEPT protocol icmp icmp-type 13 icmp-code 0
+ip filter chain INPUT rule append tail target ACCEPT protocol icmp icmp-type 14 icmp-code 0
+ip filter chain INPUT rule append tail target ACCEPT protocol icmp icmp-type 17 icmp-code 0
+ip filter chain INPUT rule append tail target ACCEPT protocol icmp icmp-type 18 icmp-code 0
+ip filter chain OUTPUT rule append tail target ACCEPT protocol icmp icmp-type 13 icmp-code 0
+ip filter chain OUTPUT rule append tail target ACCEPT protocol icmp icmp-type 14 icmp-code 0
+ip filter chain OUTPUT rule append tail target ACCEPT protocol icmp icmp-type 17 icmp-code 0
+ip filter chain OUTPUT rule append tail target ACCEPT protocol icmp icmp-type 18 icmp-code 0
+ip filter chain OUTPUT rule append tail target DROP protocol icmp icmp-type 13
+ip filter chain OUTPUT rule append tail target DROP protocol icmp icmp-type 14
+ip filter chain OUTPUT rule append tail target DROP protocol icmp icmp-type 17
+ip filter chain OUTPUT rule append tail target DROP protocol icmp icmp-type 18
+ip filter chain INPUT rule append tail target DROP protocol icmp icmp-type 13
+ip filter chain INPUT rule append tail target DROP protocol icmp icmp-type 14
+ip filter chain INPUT rule append tail target DROP protocol icmp icmp-type 17
+ip filter chain INPUT rule append tail target DROP protocol icmp icmp-type 18
+ip filter chain INPUT rule append tail target DROP protocol tcp dest-port 50030
+ip filter chain INPUT rule append tail target DROP protocol tcp dest-port 50060
+ip filter chain INPUT rule append tail target DROP protocol tcp dest-port 50070
+ip filter chain INPUT rule append tail target DROP protocol tcp dest-port 50071
+ip filter chain INPUT rule append tail target DROP protocol tcp dest-port 50076
+ip filter chain INPUT rule append tail target DROP protocol tcp dest-port 50075
+ip filter chain INPUT rule append tail target DROP protocol tcp dest-port 50090
+ip filter chain INPUT rule append tail target DROP protocol udp dest-port 5353
+ip filter chain INPUT rule append tail target DROP protocol tcp dest-port 8080
+ip filter enable
+# user
+no username admin disable
+username admin password Gu@vu$!!
+username admin capability admin
+no username ronlygrp disable
+username ronlygrp password r0nl@CLT
+username ronlygrp capability unpriv
+no username fnenggrp disable
+username fnenggrp password BRR@Gvs1
+username fnenggrp capability admin
+no username pnsa disable
+username pnsa password Gu@vu$!!
+username pnsa capability unpriv
+username monitor disable
+no username swtchgrp disable
+username swtchgrp password ANRP@2YR
+username swtchgrp capability admin
+username cmcclient disable
+username cmcrendev disable
+no username root disable
+username root password Gu@vu$!!
+no username vendgrp disable
+username vendgrp password Gu@vus11
+username vendgrp capability admin
+no username srenggrp disable
+username srenggrp password sr3n@PNSA
+username srenggrp capability admin
+aaa authentication attempts lockout max-fail 3
+# ntp
+no ntp disable
+ssh client global host-key-check no
+ntp server 10.136.46.1
+no ntp server 10.136.46.1 disable
+ntpdate 10.136.46.1
+# snmp
+snmp-server community 2Y2LHTZP31 ro
+snmp-server enable
+snmp-server enable communities
+snmp-server enable traps
+snmp-server listen enable
+snmp-server location VISPDC
+snmp-server traps community 2Y2LHTZP31
+no snmp-server community public
+snmp-server traps event no-collector-data
+snmp-server traps event collector-data-resume
+snmp-server traps event collector-dropped-flow-alarm-cleared
+snmp-server traps event collector-dropped-flow-thres-crossed
+snmp-server traps event data-transfer-fail-alarm-cleared
+snmp-server traps event data-transfer-failed
+snmp-server traps event data-transfer-stall
+snmp-server traps event data-transfer-stall-alarm-cleared
+snmp-server traps event invalid-record-thresh-trap
+snmp-server traps event invalid-record-thresh-cleared
+snmp-server traps event cpu-util-high
+snmp-server traps event cpu-util-ok
+snmp-server traps event disk-io-high
+snmp-server traps event disk-io-ok
+snmp-server traps event disk-space-low
+snmp-server traps event disk-space-ok
+snmp-server traps event interface-down
+snmp-server traps event interface-up
+snmp-server traps event memusage-high
+snmp-server traps event memusage-ok
+snmp-server traps event netusage-high
+snmp-server traps event netusage-ok
+snmp-server traps event paging-high
+snmp-server traps event paging-ok
+snmp-server traps event process-crash
+snmp-server traps event process-relaunched
+snmp-server traps event long-time-taken-to-transfer-data
+snmp-server traps event long-time-taken-to-transfer-data-alarm-cleared
+snmp-server traps event test-trap
+snmp-server traps event unexpected-shutdown
+no snmp-server traps event process-exit
+no snmp-server traps event smart-warning
+stats alarm disk_io enable
+stats alarm intf_util enable
+stats alarm memory_pct_used enable
+stats alarm disk_io rising error-threshold 81920
+stats alarm disk_io rising clear-threshold 51200
+stats alarm intf_util rising error-threshold 1572864000
+stats alarm intf_util rising clear-threshold 1258291200
+stats alarm paging rising error-threshold 16000
+internal set modify - /stats/config/alarm/paging/trigger/type value string chd
+internal set modify - /stats/config/chd/paging/time/interval_length value duration_sec 300
+internal set modify - /stats/config/alarm/cpu_util_indiv/trigger/node_pattern value name /system/cpu/all/busy_pct
+internal set modify - /stats/config/sample/disk_io/interval value duration_sec 3600
+internal set create - "/stats/config/alarm/fs_mnt/trigger/node_patterns/\\/system\/fs\\/mount\/\\\\\\/data\\/bytes-percent-free" value name "/system/fs/mount/\/data/bytes-percent-free"
+internal set create - "/stats/config/alarm/fs_mnt/trigger/node_patterns/\\/system\/fs\\/mount\/\\\\\\/data\\\\\\/hadoop-admin\\/bytes-percent-free" value name "/system/fs/mount/\/data\/hadoop-admin/bytes-percent-free"
+no snmp-server host 10.136.46.1 disable
+snmp-server host 10.136.46.1 traps version 2c 2Y2LHTZP31
+pm process statsd restart
+pm process insta terminate
+no pm process insta launch enable
+no pm process insta launch relaunch auto
+no snmp-server traps event insta-adaptor-down
+no cmc server enable
+no cmc client enable

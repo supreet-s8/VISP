@@ -1,0 +1,16 @@
+#
+# SNMP common configuration
+
+# SNMP Trap receiver
+# North West
+snmp.server.1.ip=10.136.46.1
+
+# Ehealth server
+
+# HPOV Dev server
+
+# Community String
+snmp.server.community=2Y2LHTZP31
+
+# Site Name
+snmp.server.location=VISPDC
