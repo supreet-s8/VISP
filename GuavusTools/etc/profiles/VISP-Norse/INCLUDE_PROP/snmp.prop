@@ -8,6 +8,8 @@ snmp.server.2.ip=10.194.102.206
 snmp.server.3.ip=10.136.239.161
 snmp.server.4.ip=10.136.239.218
 snmp.server.5.ip=10.215.221.128
+snmp.server.4.community=VzSnMp12
+snmp.server.5.community=VzSnMp12
 
 # Ehealth server
 
@@ -17,4 +19,4 @@ snmp.server.5.ip=10.215.221.128
 snmp.server.community=2Y2LHTZP31
 
 # Site Name
-snmp.server.location=Euless
+snmp.server.location=Wall

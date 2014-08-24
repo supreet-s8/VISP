@@ -20,7 +20,7 @@ hadoop.master.ip=172.30.13.20
 # Oozie Mandatory
 oozie.collector.component.count=1
 oozie.namenode.vip=172.30.13.20
-oozie.namenode.hostname=ELSSTX13VIS-A-VZ-GVS1-VIP
+oozie.namenode.hostname=WLTPNJ22VIS-A-VZ-GVS1-VIP
 
 # Job details (PerMinuteIpfix)
 oozie.job.PerMinuteIpfix.name=CronJob
@@ -132,7 +132,7 @@ oozie.job.CleanupResidual.path=/opt/etc/oozie/CleanupDataset
 oozie.job.CleanupResidual.attribute.jobFrequency=1
 
 # Dataset attributes
-oozie.dataset.common.attribute.DCName=Euless
+oozie.dataset.common.attribute.DCName=Wall
 oozie.dataset.common.attribute.destNamenode=cospgvcnp8-vip
-oozie.dataset.common.attribute.srcNamenode=ELSSTX13VIS-A-VZ-GVS1-VIP
+oozie.dataset.common.attribute.srcNamenode=WLTPNJ22VIS-A-VZ-GVS1-VIP
 

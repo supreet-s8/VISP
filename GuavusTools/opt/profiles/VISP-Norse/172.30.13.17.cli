@@ -6,7 +6,7 @@ no interface eth6 dhcp
 interface eth7 bond icnb
 no interface eth7 shutdown
 no interface eth7 dhcp
-interface icnb ip address 192.168.10.21 255.255.255.0
+interface icnb ip address 192.168.10.17 255.255.255.0
 no interface icnb shutdown
 no interface icnb dhcp
 interface icnb comment "Inter Chassis Network"
@@ -19,7 +19,7 @@ ip host VISP-SAP-COL-VIP 10.136.46.25
 ip host WLTPNJ22VIS-A-VZ-GVS1-04 192.168.10.17
 ip host WLTPNJ22VIS-A-VZ-GVS1-05 192.168.10.19
 ip host Allot-DM1 192.168.10.1
-ip host WLTPNJ22VIS-A-VZ-GVS1-VIP 172.30.13.20
+ip host WLTPNJ22VIS-A-VZ-GVS1-VIP 10.213.176.4
 ip host WLTPNJ22VIS-A-VZ-GVS1-07 192.168.10.23
 ip host WLTPNJ22VIS-A-VZ-GVS1-08 192.168.10.25
 ip host cospgvcnp1 10.136.239.41
@@ -30,7 +30,7 @@ ip host WLTPNJ22VIS-A-VZ-GVS1-02 192.168.10.13
 ip host WLTPNJ22VIS-A-VZ-GVS1-03 192.168.10.15
 ip host cospgvcnp6 10.136.239.88
 ip host Allot-DM2 192.168.10.2
-hostname WLTPNJ22VIS-A-VZ-GVS1-06
+hostname WLTPNJ22VIS-A-VZ-GVS1-04
 no web enable
 no web http enable
 no web https enable

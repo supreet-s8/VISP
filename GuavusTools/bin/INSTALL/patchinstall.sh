@@ -33,7 +33,7 @@ clear
 echo "------- INSTALLING PATCH ON ALL NODES -----------"
 for i in $cmp $col $col2
 do
-  /usr/bin/scp -q $PWD/../atlas4.0.1.rc3.p1.tgz root@${prefix}${i}:/tmp 
+  /usr/bin/scp -q /tmp/VISP/GuavusTools/bin/INSTALL/atlas4.0.1.rc3.p1.tgz root@${prefix}${i}:/tmp 
     echo "Mounting ${prefix}${i} in read-write mode"
     $SSH ${prefix}${i} "mount -o remount,rw /"
     $SSH ${prefix}${i} "/opt/tps/bin/pmx.py subshell patch fetch /tmp/atlas4.0.1.rc3.p1.tgz"

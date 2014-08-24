@@ -19,7 +19,7 @@ ip host VISP-SAP-COL-VIP 10.136.46.25
 ip host WLTPNJ22VIS-A-VZ-GVS1-04 192.168.10.17
 ip host WLTPNJ22VIS-A-VZ-GVS1-05 192.168.10.19
 ip host Allot-DM1 192.168.10.1
-ip host WLTPNJ22VIS-A-VZ-GVS1-VIP 172.30.13.20
+ip host WLTPNJ22VIS-A-VZ-GVS1-VIP 10.213.176.4
 ip host WLTPNJ22VIS-A-VZ-GVS1-07 192.168.10.23
 ip host WLTPNJ22VIS-A-VZ-GVS1-08 192.168.10.25
 ip host cospgvcnp1 10.136.239.41
@@ -324,33 +324,33 @@ pmx set hadoop slave 192.168.10.21
 pmx set hadoop slave 192.168.10.15
 pmx set hadoop slave 192.168.10.19
 pmx set hadoop slave 192.168.10.25
-pmx set hadoop master 172.30.13.20
+pmx set hadoop master 172.30.10.20
 pmx set hadoop namenode UNINIT
-pmx set hadoop oozieServer 172.30.13.20
+pmx set hadoop oozieServer 172.30.10.20
 # oozie
 pmx set oozie namenode WLTPNJ22VIS-A-VZ-GVS1-VIP
-pmx set oozie oozieServer 172.30.13.20
+pmx set oozie oozieServer 172.30.10.20
 pmx set oozie sshHost 127.0.0.1
 pmx set oozie snapshotPath /data/snapshots
 pmx subshell oozie add job CleanupResidual CleanupDataset /opt/etc/oozie/CleanupDataset
 pmx subshell oozie set job CleanupResidual attribute jobFrequency 1
-pmx subshell oozie set job CleanupResidual attribute jobStart 2014-08-23T17:00Z
+pmx subshell oozie set job CleanupResidual attribute jobStart 2014-08-22T20:00Z
 pmx subshell oozie set job CleanupResidual attribute jobEnd 2099-12-31T00:00Z
 pmx subshell oozie add job PerMinuteIpfix CronJob /opt/etc/oozie/Cron
 pmx subshell oozie set job PerMinuteIpfix attribute jobFrequency 5
 pmx subshell oozie set job PerMinuteIpfix attribute runFile /data/clean_collector_input/clean_collector_input.py
 pmx subshell oozie set job PerMinuteIpfix attribute frequencyUnit minute
 pmx subshell oozie set job PerMinuteIpfix attribute args /data/visp/http,900
-pmx subshell oozie set job PerMinuteIpfix attribute jobStart 2014-08-23T17:00Z
+pmx subshell oozie set job PerMinuteIpfix attribute jobStart 2014-08-22T20:00Z
 pmx subshell oozie set job PerMinuteIpfix attribute jobEnd 2099-12-31T00:00Z
 pmx subshell oozie add job Radiuscp DistcpJob /opt/etc/oozie/Distcp
 pmx subshell oozie set job Radiuscp attribute jobFrequency 5
 pmx subshell oozie set job Radiuscp action DistcpAction attribute timeout 0
-pmx subshell oozie set job Radiuscp attribute jobStart 2014-08-23T17:00Z
+pmx subshell oozie set job Radiuscp attribute jobStart 2014-08-22T20:00Z
 pmx subshell oozie set job Radiuscp attribute jobEnd 2099-12-31T00:00Z
 pmx subshell oozie add job CleanupSubIb CleanupAtlas /opt/etc/oozie/CleanupAtlas
 pmx subshell oozie set job CleanupSubIb attribute jobFrequency 1
-pmx subshell oozie set job CleanupSubIb attribute jobStart 2014-08-23T17:00Z
+pmx subshell oozie set job CleanupSubIb attribute jobStart 2014-08-22T20:00Z
 pmx subshell oozie set job CleanupSubIb attribute jobEnd 2099-12-31T00:00Z
 pmx subshell oozie add job Atlas AtlasCubes /opt/etc/oozie/AtlasCubes
 pmx subshell oozie set job Atlas attribute binInterval 3600
@@ -364,46 +364,46 @@ pmx subshell oozie set job Atlas action WngIBCreator attribute timeout 0
 pmx subshell oozie set job Atlas action SubcrDev attribute timeout 0
 pmx subshell oozie set job Atlas action SubcrBytesAgg attribute timeout 0
 pmx subshell oozie set job Atlas action TopN attribute timeout 0
-pmx subshell oozie set job Atlas attribute jobStart 2014-08-23T17:00Z
+pmx subshell oozie set job Atlas attribute jobStart 2014-08-22T20:00Z
 pmx subshell oozie set job Atlas attribute jobEnd 2099-12-31T00:00Z
 pmx subshell oozie add job CleanupCollector CleanupDataset /opt/etc/oozie/CleanupDataset
 pmx subshell oozie set job CleanupCollector attribute jobFrequency 1
-pmx subshell oozie set job CleanupCollector attribute jobStart 2014-08-23T17:00Z
+pmx subshell oozie set job CleanupCollector attribute jobStart 2014-08-22T20:00Z
 pmx subshell oozie set job CleanupCollector attribute jobEnd 2099-12-31T00:00Z
 pmx subshell oozie add job CleanupLogs CleanupLogs /opt/etc/oozie/CleanupLogs
 pmx subshell oozie set job CleanupLogs attribute jobFrequency 1
-pmx subshell oozie set job CleanupLogs attribute jobStart 2014-08-23T17:00Z
+pmx subshell oozie set job CleanupLogs attribute jobStart 2014-08-22T20:00Z
 pmx subshell oozie set job CleanupLogs attribute jobEnd 2099-12-31T00:00Z
 pmx subshell oozie add job Ipfixcp3 DistcpJob /opt/etc/oozie/Distcp
 pmx subshell oozie set job Ipfixcp3 attribute jobFrequency 15
 pmx subshell oozie set job Ipfixcp3 action DistcpAction attribute timeout 0
-pmx subshell oozie set job Ipfixcp3 attribute jobStart 2014-08-23T17:00Z
+pmx subshell oozie set job Ipfixcp3 attribute jobStart 2014-08-22T20:00Z
 pmx subshell oozie set job Ipfixcp3 attribute jobEnd 2099-12-31T00:00Z
 pmx subshell oozie add job BackupDistcp BackupDistcp /opt/etc/oozie/BackupDistcp
 pmx subshell oozie set job BackupDistcp attribute jobFrequency 5
-pmx subshell oozie set job BackupDistcp attribute jobStart 2014-08-23T17:00Z
+pmx subshell oozie set job BackupDistcp attribute jobStart 2014-08-22T20:00Z
 pmx subshell oozie set job BackupDistcp attribute jobEnd 2099-12-31T00:00Z
 pmx subshell oozie add job Ipfixcp2 DistcpJob /opt/etc/oozie/Distcp
 pmx subshell oozie set job Ipfixcp2 attribute jobFrequency 15
 pmx subshell oozie set job Ipfixcp2 action DistcpAction attribute timeout 0
-pmx subshell oozie set job Ipfixcp2 attribute jobStart 2014-08-23T17:00Z
+pmx subshell oozie set job Ipfixcp2 attribute jobStart 2014-08-22T20:00Z
 pmx subshell oozie set job Ipfixcp2 attribute jobEnd 2099-12-31T00:00Z
 pmx subshell oozie add job SubscriberIBcp DistcpJob /opt/etc/oozie/Distcp
 pmx subshell oozie set job SubscriberIBcp attribute jobFrequency 60
 pmx subshell oozie set job SubscriberIBcp action DistcpAction attribute timeout 0
-pmx subshell oozie set job SubscriberIBcp attribute jobStart 2014-08-23T17:00Z
+pmx subshell oozie set job SubscriberIBcp attribute jobStart 2014-08-22T20:00Z
 pmx subshell oozie set job SubscriberIBcp attribute jobEnd 2099-12-31T00:00Z
 pmx subshell oozie add job Ipfixcp1 DistcpJob /opt/etc/oozie/Distcp
 pmx subshell oozie set job Ipfixcp1 attribute jobFrequency 15
 pmx subshell oozie set job Ipfixcp1 action DistcpAction attribute timeout 0
-pmx subshell oozie set job Ipfixcp1 attribute jobStart 2014-08-23T17:00Z
+pmx subshell oozie set job Ipfixcp1 attribute jobStart 2014-08-22T20:00Z
 pmx subshell oozie set job Ipfixcp1 attribute jobEnd 2099-12-31T00:00Z
 pmx subshell oozie add job PerMinutePilot CronJob /opt/etc/oozie/Cron
 pmx subshell oozie set job PerMinutePilot attribute jobFrequency 5
 pmx subshell oozie set job PerMinutePilot attribute runFile /data/clean_collector_input/clean_collector_input.py
 pmx subshell oozie set job PerMinutePilot attribute frequencyUnit minute
 pmx subshell oozie set job PerMinutePilot attribute args /data/visp/pilot,900
-pmx subshell oozie set job PerMinutePilot attribute jobStart 2014-08-23T17:00Z
+pmx subshell oozie set job PerMinutePilot attribute jobStart 2014-08-22T20:00Z
 pmx subshell oozie set job PerMinutePilot attribute jobEnd 2099-12-31T00:00Z
 pmx subshell oozie set job Atlas attribute lastSuccessPath /data/local/LastSucessfulOutput
 pmx subshell oozie set job Atlas action SubscriberIBCreator attribute binaryInput true
@@ -516,7 +516,7 @@ pmx subshell oozie set job CleanupSubIb action CleanupAction attribute cleanupDa
 pmx subshell oozie set job CleanupSubIb action CleanupAction attribute cleanupDatasets pnsa_ipportcleanup
 pmx subshell oozie set job CleanupLogs attribute frequencyUnit day
 pmx subshell oozie set job CleanupLogs action CleanupLogAction attribute cleanupOffset 15
-pmx subshell oozie set job CleanupLogs action CleanupLogAction attribute collectorIPs 172.30.13.20
+pmx subshell oozie set job CleanupLogs action CleanupLogAction attribute collectorIPs 172.30.10.20
 pmx subshell oozie set job BackupDistcp action BackupDistcpAction attribute bucketSize 3
 pmx subshell oozie set job BackupDistcp action BackupDistcpAction attribute safeDelay 39600
 pmx subshell oozie set job BackupDistcp action BackupDistcpAction attribute maxParallelThreads 1
@@ -657,22 +657,22 @@ pmx subshell oozie set dataset destRadiusRecords attribute doneFile _DONE
 pmx subshell oozie set dataset destRadiusRecords attribute outputOffset 0
 pmx subshell oozie set dataset destRadiusRecords attribute path /data/Wall/pilotPacket/%Y/%M/%D/%H/%mi/
 pmx subshell oozie set dataset destRadiusRecords attribute pathType hdfs
-pmx subshell oozie set dataset pnsa_ipportcleanup attribute startTime 2014-08-23T17:00Z
-pmx subshell oozie set dataset pnsa_subib attribute startTime 2014-08-23T17:00Z
-pmx subshell oozie set dataset pnsa_radius attribute startTime 2014-08-23T17:00Z
-pmx subshell oozie set dataset srcIpfixRecords attribute startTime 2014-08-23T17:00Z
-pmx subshell oozie set dataset destIpfixRecords attribute startTime 2014-08-23T17:00Z
-pmx subshell oozie set dataset srcSubscriberIB attribute startTime 2014-08-23T17:00Z
-pmx subshell oozie set dataset destSubscriberIB attribute startTime 2014-08-23T17:00Z
-pmx subshell oozie set dataset srcRadiusRecords attribute startTime 2014-08-23T17:00Z
-pmx subshell oozie set dataset destRadiusRecords attribute startTime 2014-08-23T17:00Z
-pmx subshell oozie set dataset pnsa_ipportcleanup_residual attribute startTime 2014-08-23T17:00Z
-pmx subshell oozie set dataset pnsa_subib_residual attribute startTime 2014-08-23T17:00Z
-pmx subshell oozie set dataset srcIpfixResidual attribute startTime 2014-08-23T17:00Z
-pmx subshell oozie set dataset srcRadiusResidual attribute startTime 2014-08-23T17:00Z
-pmx subshell oozie set dataset pnsa_selfipcleanup attribute startTime 2014-08-23T17:00Z
-pmx subshell oozie set dataset pnsa_selfipcleanup1 attribute startTime 2014-08-23T17:00Z
-pmx subshell oozie set dataset pnsa_selfipcleanup_residual attribute startTime 2014-08-23T17:00Z
+pmx subshell oozie set dataset pnsa_ipportcleanup attribute startTime 2014-08-22T20:00Z
+pmx subshell oozie set dataset pnsa_subib attribute startTime 2014-08-22T20:00Z
+pmx subshell oozie set dataset pnsa_radius attribute startTime 2014-08-22T20:00Z
+pmx subshell oozie set dataset srcIpfixRecords attribute startTime 2014-08-22T20:00Z
+pmx subshell oozie set dataset destIpfixRecords attribute startTime 2014-08-22T20:00Z
+pmx subshell oozie set dataset srcSubscriberIB attribute startTime 2014-08-22T20:00Z
+pmx subshell oozie set dataset destSubscriberIB attribute startTime 2014-08-22T20:00Z
+pmx subshell oozie set dataset srcRadiusRecords attribute startTime 2014-08-22T20:00Z
+pmx subshell oozie set dataset destRadiusRecords attribute startTime 2014-08-22T20:00Z
+pmx subshell oozie set dataset pnsa_ipportcleanup_residual attribute startTime 2014-08-22T20:00Z
+pmx subshell oozie set dataset pnsa_subib_residual attribute startTime 2014-08-22T20:00Z
+pmx subshell oozie set dataset srcIpfixResidual attribute startTime 2014-08-22T20:00Z
+pmx subshell oozie set dataset srcRadiusResidual attribute startTime 2014-08-22T20:00Z
+pmx subshell oozie set dataset pnsa_selfipcleanup attribute startTime 2014-08-22T20:00Z
+pmx subshell oozie set dataset pnsa_selfipcleanup1 attribute startTime 2014-08-22T20:00Z
+pmx subshell oozie set dataset pnsa_selfipcleanup_residual attribute startTime 2014-08-22T20:00Z
 # drbd
 pmx set drbd hosttwo WLTPNJ22VIS-A-VZ-GVS1-02
 pmx set drbd hosttwoip 192.168.10.13

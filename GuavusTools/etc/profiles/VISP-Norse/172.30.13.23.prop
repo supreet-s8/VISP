@@ -26,7 +26,7 @@ include=iptablesCollector1
 include=iptablesHadoop
 
 # Configure Hostname
-ip.hostname=ELSSTX13VIS-A-VZ-GVS1-02
+ip.hostname=WLTPNJ22VIS-A-VZ-GVS1-02
 
 ##########################
 # Interface Configuration
