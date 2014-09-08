@@ -1,0 +1,10 @@
+#######################
+# Cluster Configuration
+#######################
+cluster.WNDSCTWL-VISP-01.name=WNDSCTWLVIS-GVS-COL1-VIP
+cluster.WNDSCTWL-VISP-01.interface=icnb
+cluster.WNDSCTWL-VISP-01.expected-nodes=2
+cluster.WNDSCTWL-VISP-01.master.address=10.212.76.4
+cluster.WNDSCTWL-VISP-01.master.subnet=255.255.255.0
+cluster.WNDSCTWL-VISP-01.master.interface=amnb
+
