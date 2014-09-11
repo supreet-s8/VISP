@@ -1,0 +1,34 @@
+# Routing configuration
+ip.default-gateway=10.143.52.1
+#ip.name-server=
+
+# Host mappings
+ip.host.LENYKSCJVIS-A-VZ-GVS1-01=192.168.10.11
+ip.host.LENYKSCJVIS-A-VZ-GVS1-02=192.168.10.13
+ip.host.LENYKSCJVIS-A-VZ-GVS1-03=192.168.10.15
+ip.host.LENYKSCJVIS-A-VZ-GVS1-04=192.168.10.17
+ip.host.LENYKSCJVIS-A-VZ-GVS1-05=192.168.10.19
+ip.host.LENYKSCJVIS-A-VZ-GVS1-06=192.168.10.21
+ip.host.LENYKSCJVIS-A-VZ-GVS1-07=192.168.10.23
+ip.host.LENYKSCJVIS-A-VZ-GVS1-08=192.168.10.25
+
+ip.host.LENYKSCJVIS-A-VZ-GVS1-VIP=10.143.52.4
+
+ip.host.Allot-DM1=192.168.10.1
+ip.host.Allot-DM2=192.168.10.2
+
+# EDN Network for VISP NEC
+ip.host.VISP-SAP-COL-VIP=10.136.46.25
+
+# Host Mappings External SAP (NEC)
+ip.host.cospgvcnp8-vip=10.136.239.147
+ip.host.cospgvcnp6=10.136.239.88
+ip.host.cospgvcnp7=10.136.239.118
+
+# CMDS-NEC (NAP)
+ip.host.cospgvcnp1=10.136.239.41
+ip.host.cospgvcnp2=10.136.239.42
+ip.host.cospgvcnp0=10.136.239.57
+
+# Turn on/off static host mapping
+ip.map-hostname=no

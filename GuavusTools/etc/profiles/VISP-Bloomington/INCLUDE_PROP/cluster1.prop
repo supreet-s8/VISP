@@ -1,0 +1,10 @@
+#######################
+# Cluster Configuration
+#######################
+cluster.BLTNMN86-VISP-01.name=BLTNMN86VIS-GVS-COL1-VIP
+cluster.BLTNMN86-VISP-01.interface=icnb
+cluster.BLTNMN86-VISP-01.expected-nodes=2
+cluster.BLTNMN86-VISP-01.master.address=10.142.253.4
+cluster.BLTNMN86-VISP-01.master.subnet=255.255.255.0
+cluster.BLTNMN86-VISP-01.master.interface=amnb
+

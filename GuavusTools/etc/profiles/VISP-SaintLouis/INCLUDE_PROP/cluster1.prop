@@ -1,0 +1,10 @@
+#######################
+# Cluster Configuration
+#######################
+cluster.STLSMOYQ-VISP-01.name=STLSMOYQVIS-GVS-COL1-VIP
+cluster.STLSMOYQ-VISP-01.interface=icnb
+cluster.STLSMOYQ-VISP-01.expected-nodes=2
+cluster.STLSMOYQ-VISP-01.master.address=10.217.22.4
+cluster.STLSMOYQ-VISP-01.master.subnet=255.255.255.0
+cluster.STLSMOYQ-VISP-01.master.interface=amnb
+
