@@ -1,0 +1,10 @@
+#######################
+# Cluster Configuration
+#######################
+cluster.HSNOTX08-VISP-01.name=HSNOTX08VIS-GVS-COL1-VIP
+cluster.HSNOTX08-VISP-01.interface=icnb
+cluster.HSNOTX08-VISP-01.expected-nodes=2
+cluster.HSNOTX08-VISP-01.master.address=10.192.62.4
+cluster.HSNOTX08-VISP-01.master.subnet=255.255.255.0
+cluster.HSNOTX08-VISP-01.master.interface=amnb
+

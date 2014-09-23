@@ -20,7 +20,7 @@ hadoop.master.ip=10.213.125.4
 # Oozie Mandatory
 oozie.collector.component.count=1
 oozie.namenode.vip=10.213.125.4
-oozie.namenode.hostname=HRNTNYCRVIS-A-VZ-GVS1-VIP
+oozie.namenode.hostname=HNRTNYCRVIS-A-VZ-GVS1-VIP
 
 # Job details (PerMinuteIpfix)
 oozie.job.PerMinuteIpfix.name=CronJob
@@ -134,5 +134,5 @@ oozie.job.CleanupResidual.attribute.jobFrequency=1
 # Dataset attributes
 oozie.dataset.common.attribute.DCName=Rochester
 oozie.dataset.common.attribute.destNamenode=cospgvcnp8-vip
-oozie.dataset.common.attribute.srcNamenode=HRNTNYCRVIS-A-VZ-GVS1-VIP
+oozie.dataset.common.attribute.srcNamenode=HNRTNYCRVIS-A-VZ-GVS1-VIP
 

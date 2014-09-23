@@ -26,7 +26,7 @@ include=iptablesCollector1
 include=iptablesHadoop
 
 # Configure Hostname
-ip.hostname=HRNTNYCRVIS-A-VZ-GVS1-01
+ip.hostname=HNRTNYCRVIS-A-VZ-GVS1-01
 
 ##########################
 # Interface Configuration

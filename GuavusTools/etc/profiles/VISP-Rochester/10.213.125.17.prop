@@ -19,7 +19,7 @@ include=hostmap
 include=iptablesHadoop
 
 # Configure Hostname
-ip.hostname=HRNTNYCRVIS-A-VZ-GVS1-04
+ip.hostname=HNRTNYCRVIS-A-VZ-GVS1-04
 
 ##########################
 # Interface Configuration

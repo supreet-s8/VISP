@@ -1,0 +1,10 @@
+#######################
+# Cluster Configuration
+#######################
+cluster.BTRHLAGR-VISP-01.name=BTRHLAGRVIS-GVS-COL1-VIP
+cluster.BTRHLAGR-VISP-01.interface=icnb
+cluster.BTRHLAGR-VISP-01.expected-nodes=2
+cluster.BTRHLAGR-VISP-01.master.address=10.143.143.4
+cluster.BTRHLAGR-VISP-01.master.subnet=255.255.255.0
+cluster.BTRHLAGR-VISP-01.master.interface=amnb
+
