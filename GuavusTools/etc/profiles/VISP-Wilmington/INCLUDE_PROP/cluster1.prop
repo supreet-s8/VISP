@@ -1,0 +1,10 @@
+#######################
+# Cluster Configuration
+#######################
+cluster.NWCSDEBG-VISP-01.name=NWCSDEBGVIS-GVS-COL1-VIP
+cluster.NWCSDEBG-VISP-01.interface=icnb
+cluster.NWCSDEBG-VISP-01.expected-nodes=2
+cluster.NWCSDEBG-VISP-01.master.address=10.216.116.4
+cluster.NWCSDEBG-VISP-01.master.subnet=255.255.255.0
+cluster.NWCSDEBG-VISP-01.master.interface=amnb
+

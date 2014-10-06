@@ -39,6 +39,7 @@ SUMMARY:
 		- VISP-Bloomington	12-09-2014      FRIDAY
 		- VISP-Copperfield	23-09-2014      TUESDAY
 		- VISP-BatonRouge	23-09-2014      TUESDAY
+		- VISP-Wilmington	06-10-2014      MONDAY
 
 #
 
