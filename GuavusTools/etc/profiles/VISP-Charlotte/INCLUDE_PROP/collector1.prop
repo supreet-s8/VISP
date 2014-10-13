@@ -10,4 +10,4 @@ collector.instance.1.ipfix.fileFormat=ascii
 collector.instance.1.ipfix.inputPath=/data/visp/http/
 collector.instance.1.pilotPacket.fileFormat=binary
 collector.instance.1.pilotPacket.inputPath=/data/visp/pilot/
-collector.DCName=NLVGNVOQ
+collector.DCName=Charlotte

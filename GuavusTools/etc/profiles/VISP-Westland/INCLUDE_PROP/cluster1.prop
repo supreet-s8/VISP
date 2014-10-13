@@ -1,10 +1,10 @@
 #######################
 # Cluster Configuration
 #######################
-cluster.NLVGNVOQ-VISP-01.name=NLVGNVOQVIS-GVS-COL1-VIP
-cluster.NLVGNVOQ-VISP-01.interface=icnb
-cluster.NLVGNVOQ-VISP-01.expected-nodes=2
-cluster.NLVGNVOQ-VISP-01.master.address=10.218.93.4
-cluster.NLVGNVOQ-VISP-01.master.subnet=255.255.255.0
-cluster.NLVGNVOQ-VISP-01.master.interface=amnb
+cluster.CTTPMIBG-VISP-01.name=CTTPMIBGVIS-GVS-COL1-VIP
+cluster.CTTPMIBG-VISP-01.interface=icnb
+cluster.CTTPMIBG-VISP-01.expected-nodes=2
+cluster.CTTPMIBG-VISP-01.master.address=10.217.62.4
+cluster.CTTPMIBG-VISP-01.master.subnet=255.255.255.0
+cluster.CTTPMIBG-VISP-01.master.interface=amnb
 

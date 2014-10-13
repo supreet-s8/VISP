@@ -12,15 +12,15 @@ hadoop.slaves.4=192.168.10.23
 hadoop.slaves.5=192.168.10.25
 
 # Master is a namenode cluster VIP
-hadoop.master.ip=10.218.93.4
+hadoop.master.ip=10.217.62.4
 
 #### OOZIE Collection Centre Config ####
 
 # Provide oozie server to be the VIP address of the Name node cluster
 # Oozie Mandatory
 oozie.collector.component.count=1
-oozie.namenode.vip=10.218.93.4
-oozie.namenode.hostname=NLVGNVOQVIS-A-VZ-GVS1-VIP
+oozie.namenode.vip=10.217.62.4
+oozie.namenode.hostname=CTTPMIBGVIS-A-VZ-GVS1-VIP
 
 # Job details (PerMinuteIpfix)
 oozie.job.PerMinuteIpfix.name=CronJob
@@ -132,7 +132,7 @@ oozie.job.CleanupResidual.path=/opt/etc/oozie/CleanupDataset
 oozie.job.CleanupResidual.attribute.jobFrequency=1
 
 # Dataset attributes
-oozie.dataset.common.attribute.DCName=NLVGNVOQ
+oozie.dataset.common.attribute.DCName=Westland
 oozie.dataset.common.attribute.destNamenode=cospgvcnp8-vip
-oozie.dataset.common.attribute.srcNamenode=NLVGNVOQVIS-A-VZ-GVS1-VIP
+oozie.dataset.common.attribute.srcNamenode=CTTPMIBGVIS-A-VZ-GVS1-VIP
 

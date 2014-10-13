@@ -19,4 +19,4 @@ snmp.server.5.community=VzSnMp12
 snmp.server.community=2Y2LHTZP31
 
 # Site Name
-snmp.server.location=NLVGNVOQ
+snmp.server.location=Westland
