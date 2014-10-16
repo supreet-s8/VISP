@@ -1,0 +1,1 @@
+../stopCollectors.sh

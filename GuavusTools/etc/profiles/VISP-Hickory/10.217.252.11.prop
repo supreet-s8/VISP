@@ -1,0 +1,44 @@
+# Product
+build=Atlas
+# Release
+version=4.0.1VISP
+
+########
+# ICN IP
+########
+# Required where you include drbd config
+drbd.self.ip=192.168.10.11
+
+#####################################################
+# Include Defaults
+#####################################################
+# Following files must exist in the specified Profile
+include=ntp
+include=user
+include=snmp
+include=drbd
+include=hostmap
+include=cluster1
+include=collector1
+include=mapReduce
+include=generateKeys
+include=iptablesCollector1
+include=iptablesHadoop
+
+# Configure Hostname
+ip.hostname=HCHLILMTVIS-A-VZ-GVS1-01
+
+##########################
+# Interface Configuration
+##########################
+interface.icnb.ip=192.168.10.11
+interface.icnb.subnet=255.255.255.0
+interface.icnb.bond=eth12,eth13
+interface.icnb.comment=Inter Chassis Network
+
+# IPTables rules for Collector/Hadoop configuration
+
+ip.filter.input.accept.0=192.168.10.11
+ip.filter.input.accept.1=192.168.10.13
+
+#####################################################################

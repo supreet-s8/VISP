@@ -1,0 +1,10 @@
+#######################
+# Cluster Configuration
+#######################
+cluster.VISTCA65-VISP-01.name=VISTCA65VIS-GVS-COL1-VIP
+cluster.VISTCA65-VISP-01.interface=icnb
+cluster.VISTCA65-VISP-01.expected-nodes=2
+cluster.VISTCA65-VISP-01.master.address=10.219.76.4
+cluster.VISTCA65-VISP-01.master.subnet=255.255.255.0
+cluster.VISTCA65-VISP-01.master.interface=amnb
+

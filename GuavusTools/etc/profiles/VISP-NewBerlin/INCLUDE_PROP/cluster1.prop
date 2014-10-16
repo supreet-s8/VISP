@@ -1,0 +1,10 @@
+#######################
+# Cluster Configuration
+#######################
+cluster.NWBLWICZ-VISP-01.name=NWBLWICZVIS-GVS-COL1-VIP
+cluster.NWBLWICZ-VISP-01.interface=icnb
+cluster.NWBLWICZ-VISP-01.expected-nodes=2
+cluster.NWBLWICZ-VISP-01.master.address=10.213.40.4
+cluster.NWBLWICZ-VISP-01.master.subnet=255.255.255.0
+cluster.NWBLWICZ-VISP-01.master.interface=amnb
+

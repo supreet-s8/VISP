@@ -1,0 +1,10 @@
+#######################
+# Cluster Configuration
+#######################
+cluster.AZUSCA21-VISP-01.name=AZUSCA21VIS-GVS-COL1-VIP
+cluster.AZUSCA21-VISP-01.interface=icnb
+cluster.AZUSCA21-VISP-01.expected-nodes=2
+cluster.AZUSCA21-VISP-01.master.address=10.219.64.4
+cluster.AZUSCA21-VISP-01.master.subnet=255.255.255.0
+cluster.AZUSCA21-VISP-01.master.interface=amnb
+
