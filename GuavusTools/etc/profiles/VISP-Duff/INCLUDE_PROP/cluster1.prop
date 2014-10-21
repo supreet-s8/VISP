@@ -1,0 +1,10 @@
+#######################
+# Cluster Configuration
+#######################
+cluster.CNCQOH22-VISP-01.name=CNCQOH22VIS-GVS-COL1-VIP
+cluster.CNCQOH22-VISP-01.interface=icnb
+cluster.CNCQOH22-VISP-01.expected-nodes=2
+cluster.CNCQOH22-VISP-01.master.address=10.219.28.4
+cluster.CNCQOH22-VISP-01.master.subnet=255.255.255.0
+cluster.CNCQOH22-VISP-01.master.interface=amnb
+

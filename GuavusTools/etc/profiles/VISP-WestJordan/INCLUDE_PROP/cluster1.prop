@@ -1,0 +1,10 @@
+#######################
+# Cluster Configuration
+#######################
+cluster.WJRDUT30-VISP-01.name=WJRDUT30VIS-GVS-COL1-VIP
+cluster.WJRDUT30-VISP-01.interface=icnb
+cluster.WJRDUT30-VISP-01.expected-nodes=2
+cluster.WJRDUT30-VISP-01.master.address=10.213.196.4
+cluster.WJRDUT30-VISP-01.master.subnet=255.255.255.0
+cluster.WJRDUT30-VISP-01.master.interface=amnb
+

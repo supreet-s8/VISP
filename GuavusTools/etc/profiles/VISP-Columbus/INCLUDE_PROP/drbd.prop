@@ -1,0 +1,8 @@
+###################################
+# DRBD # Hostnames and IP addresses
+###################################
+drbd.hostone.hostname=CLMBOHIQVIS-A-VZ-GVS1-01
+drbd.hostone.ip=192.168.10.11
+drbd.hosttwo.hostname=CLMBOHIQVIS-A-VZ-GVS1-02
+drbd.hosttwo.ip=192.168.10.13
+

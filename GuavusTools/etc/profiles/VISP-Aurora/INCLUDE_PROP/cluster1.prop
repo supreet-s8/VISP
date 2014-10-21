@@ -1,0 +1,10 @@
+#######################
+# Cluster Configuration
+#######################
+cluster.AURSCOTY-VISP-01.name=AURSCOTYVIS-GVS-COL1-VIP
+cluster.AURSCOTY-VISP-01.interface=icnb
+cluster.AURSCOTY-VISP-01.expected-nodes=2
+cluster.AURSCOTY-VISP-01.master.address=10.217.205.4
+cluster.AURSCOTY-VISP-01.master.subnet=255.255.255.0
+cluster.AURSCOTY-VISP-01.master.interface=amnb
+
