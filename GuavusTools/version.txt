@@ -47,6 +47,11 @@ SUMMARY:
 		- VISP-Azusa		16-10-2014      THURSDAY
 		- VISP-Vista		16-10-2014      THURSDAY
 		- VISP-NewBerlin	16-10-2014      THURSDAY
+		- VISP-WestJordan	21-10-2014      TUESDAY
+		- VISP-Aurora		21-10-2014      TUESDAY
+		- VISP-PlymouthMeeting	21-10-2014      TUESDAY
+		- VISP-Columbus		21-10-2014      TUESDAY
+		- VISP-Duff		21-10-2014      TUESDAY
 
 #
 
