@@ -1,0 +1,10 @@
+#######################
+# Cluster Configuration
+#######################
+cluster.TEMQAZKW-VISP-01.name=TEMQAZKWVIS-GVS-COL1-VIP
+cluster.TEMQAZKW-VISP-01.interface=icnb
+cluster.TEMQAZKW-VISP-01.expected-nodes=2
+cluster.TEMQAZKW-VISP-01.master.address=10.141.90.4
+cluster.TEMQAZKW-VISP-01.master.subnet=255.255.255.0
+cluster.TEMQAZKW-VISP-01.master.interface=amnb
+

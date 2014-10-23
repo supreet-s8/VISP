@@ -52,6 +52,7 @@ SUMMARY:
 		- VISP-PlymouthMeeting	21-10-2014      TUESDAY
 		- VISP-Columbus		21-10-2014      TUESDAY
 		- VISP-Duff		21-10-2014      TUESDAY
+		- VISP-Tempe		23-10-2014      THURSDAY
 
 #
 
