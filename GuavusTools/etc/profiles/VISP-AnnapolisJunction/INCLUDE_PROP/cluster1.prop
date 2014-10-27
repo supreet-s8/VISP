@@ -1,0 +1,10 @@
+#######################
+# Cluster Configuration
+#######################
+cluster.ANJTMDAH-VISP-01.name=ANJTMDAHVIS-GVS-COL1-VIP
+cluster.ANJTMDAH-VISP-01.interface=icnb
+cluster.ANJTMDAH-VISP-01.expected-nodes=2
+cluster.ANJTMDAH-VISP-01.master.address=10.213.105.4
+cluster.ANJTMDAH-VISP-01.master.subnet=255.255.255.0
+cluster.ANJTMDAH-VISP-01.master.interface=amnb
+

@@ -53,6 +53,9 @@ SUMMARY:
 		- VISP-Columbus		21-10-2014      TUESDAY
 		- VISP-Duff		21-10-2014      TUESDAY
 		- VISP-Tempe		23-10-2014      THURSDAY
+		- VISP-Johnstown	27-10-2014      MONDAY
+		- VISP-Bridgeville	27-10-2014      MONDAY
+		- VISP-AnnapolisJunction  27-10-2014      MONDAY
 
 #
 

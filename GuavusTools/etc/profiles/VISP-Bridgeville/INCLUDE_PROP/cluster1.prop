@@ -1,0 +1,10 @@
+#######################
+# Cluster Configuration
+#######################
+cluster.SFTPPABQ-VISP-01.name=SFTPPABQVIS-GVS-COL1-VIP
+cluster.SFTPPABQ-VISP-01.interface=icnb
+cluster.SFTPPABQ-VISP-01.expected-nodes=2
+cluster.SFTPPABQ-VISP-01.master.address=10.193.63.4
+cluster.SFTPPABQ-VISP-01.master.subnet=255.255.255.0
+cluster.SFTPPABQ-VISP-01.master.interface=amnb
+
