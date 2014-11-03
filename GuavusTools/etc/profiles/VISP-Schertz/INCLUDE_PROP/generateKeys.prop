@@ -1,0 +1,3 @@
+# Whether want to generate ssh keys or not.
+# Required for Collectors.
+ssh.key.admin=dsa2
