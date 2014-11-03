@@ -1,0 +1,10 @@
+#######################
+# Cluster Configuration
+#######################
+cluster.SFLDMILR-VISP-01.name=SFLDMILRVIS-GVS-COL1-VIP
+cluster.SFLDMILR-VISP-01.interface=icnb
+cluster.SFLDMILR-VISP-01.expected-nodes=2
+cluster.SFLDMILR-VISP-01.master.address=10.217.122.4
+cluster.SFLDMILR-VISP-01.master.subnet=255.255.255.0
+cluster.SFLDMILR-VISP-01.master.interface=amnb
+
