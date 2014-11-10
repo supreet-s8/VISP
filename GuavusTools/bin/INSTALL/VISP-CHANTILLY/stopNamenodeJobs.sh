@@ -1,0 +1,1 @@
+../stopNamenodeJobs.sh
