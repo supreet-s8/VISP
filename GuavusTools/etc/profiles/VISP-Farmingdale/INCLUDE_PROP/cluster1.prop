@@ -1,0 +1,10 @@
+#######################
+# Cluster Configuration
+#######################
+cluster.FRDLNYEK-VISP-01.name=FRDLNYEKVIS-GVS-COL1-VIP
+cluster.FRDLNYEK-VISP-01.interface=icnb
+cluster.FRDLNYEK-VISP-01.expected-nodes=2
+cluster.FRDLNYEK-VISP-01.master.address=10.213.161.4
+cluster.FRDLNYEK-VISP-01.master.subnet=255.255.255.0
+cluster.FRDLNYEK-VISP-01.master.interface=amnb
+

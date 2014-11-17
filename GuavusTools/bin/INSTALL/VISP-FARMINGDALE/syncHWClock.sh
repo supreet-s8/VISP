@@ -1,0 +1,1 @@
+../syncHWClock.sh
