@@ -1,0 +1,10 @@
+#######################
+# Cluster Configuration
+#######################
+cluster.RDMEWA22-VISP-01.name=RDMEWA22VIS-GVS-COL1-VIP
+cluster.RDMEWA22-VISP-01.interface=icnb
+cluster.RDMEWA22-VISP-01.expected-nodes=2
+cluster.RDMEWA22-VISP-01.master.address=10.142.29.4
+cluster.RDMEWA22-VISP-01.master.subnet=255.255.255.0
+cluster.RDMEWA22-VISP-01.master.interface=amnb
+

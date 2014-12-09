@@ -1,0 +1,10 @@
+#######################
+# Cluster Configuration
+#######################
+cluster.RCKLCAIG-VISP-01.name=RCKLCAIGVIS-GVS-COL1-VIP
+cluster.RCKLCAIG-VISP-01.interface=icnb
+cluster.RCKLCAIG-VISP-01.expected-nodes=2
+cluster.RCKLCAIG-VISP-01.master.address=10.141.92.4
+cluster.RCKLCAIG-VISP-01.master.subnet=255.255.255.0
+cluster.RCKLCAIG-VISP-01.master.interface=amnb
+

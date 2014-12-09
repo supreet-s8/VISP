@@ -1,0 +1,1 @@
+../shutdownNamenodes.sh

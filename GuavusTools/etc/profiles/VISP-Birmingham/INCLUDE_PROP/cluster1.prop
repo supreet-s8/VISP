@@ -1,0 +1,10 @@
+#######################
+# Cluster Configuration
+#######################
+cluster.BRHOALTB-VISP-01.name=BRHOALTBVIS-GVS-COL1-VIP
+cluster.BRHOALTB-VISP-01.interface=icnb
+cluster.BRHOALTB-VISP-01.expected-nodes=2
+cluster.BRHOALTB-VISP-01.master.address=10.143.197.4
+cluster.BRHOALTB-VISP-01.master.subnet=255.255.255.0
+cluster.BRHOALTB-VISP-01.master.interface=amnb
+

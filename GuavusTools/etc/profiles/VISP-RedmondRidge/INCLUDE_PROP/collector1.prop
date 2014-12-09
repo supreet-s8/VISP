@@ -1,0 +1,13 @@
+# Collector nodes configuration on Collection Centre.
+# Format: collector.adaptor.<name>.<attribute>=<value>
+# Count stands to be number of collectors being used for one compute cluster. Produces o/p dir.
+
+#########################
+# Collector Configuration
+#########################
+#collector.instance.adaptor.param=value
+collector.instance.1.ipfix.fileFormat=ascii
+collector.instance.1.ipfix.inputPath=/data/visp/http/
+collector.instance.1.pilotPacket.fileFormat=binary
+collector.instance.1.pilotPacket.inputPath=/data/visp/pilot/
+collector.DCName=RDMEWA22

@@ -1,0 +1,10 @@
+#######################
+# Cluster Configuration
+#######################
+cluster.ALPRGAGQ-VISP-01.name=ALPRGAGQVIS-GVS-COL1-VIP
+cluster.ALPRGAGQ-VISP-01.interface=icnb
+cluster.ALPRGAGQ-VISP-01.expected-nodes=2
+cluster.ALPRGAGQ-VISP-01.master.address=10.143.196.4
+cluster.ALPRGAGQ-VISP-01.master.subnet=255.255.255.0
+cluster.ALPRGAGQ-VISP-01.master.interface=amnb
+
