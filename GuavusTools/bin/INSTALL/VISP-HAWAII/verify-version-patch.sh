@@ -1,0 +1,1 @@
+../verify-version-patch.sh

@@ -1,0 +1,10 @@
+#######################
+# Cluster Configuration
+#######################
+cluster.MILNHI04-VISP-01.name=MILNHI04VIS-GVS-COL1-VIP
+cluster.MILNHI04-VISP-01.interface=icnb
+cluster.MILNHI04-VISP-01.expected-nodes=2
+cluster.MILNHI04-VISP-01.master.address=10.141.244.4
+cluster.MILNHI04-VISP-01.master.subnet=255.255.255.0
+cluster.MILNHI04-VISP-01.master.interface=amnb
+

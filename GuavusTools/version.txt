@@ -66,6 +66,7 @@ SUMMARY:
 		- VISP-Hillsboro	  09-12-2014      TUESDAY
 		- VISP-Alpharetta	  09-12-2014      TUESDAY
 		- VISP-Birmingham	  09-12-2014      TUESDAY
+		- VISP-Hawaii		  22-12-2014      MONDAY
 
 
 #
