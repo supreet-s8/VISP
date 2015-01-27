@@ -1,0 +1,10 @@
+#######################
+# Cluster Configuration
+#######################
+cluster.RCMDVA83-VISP-01.name=RCMDVA83VIS-GVS-COL1-VIP
+cluster.RCMDVA83-VISP-01.interface=icnb
+cluster.RCMDVA83-VISP-01.expected-nodes=2
+cluster.RCMDVA83-VISP-01.master.address=10.216.15.4
+cluster.RCMDVA83-VISP-01.master.subnet=255.255.255.0
+cluster.RCMDVA83-VISP-01.master.interface=amnb
+

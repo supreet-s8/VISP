@@ -68,6 +68,9 @@ SUMMARY:
 		- VISP-Birmingham	  09-12-2014      TUESDAY
 		- VISP-Hawaii		  22-12-2014      MONDAY
 		- VISP-Nashville	  06-01-2015      TUESDAY
+		- VISP-Sunnyvale	  09-01-2015      FRIDAY
+		- VISP-Roanoke		  27-01-2015      TUESDAY
+		- VISP-Richmond		  27-01-2015      TUESDAY
 
 
 #
